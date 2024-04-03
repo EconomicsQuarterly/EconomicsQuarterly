@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Economics Quarterly</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/globe.png">
+</head>
+<body>
+<div id="hero">
+    <div id="left">
+        <h1>Economics Quarterly</h1>
+        <p><em>Economics Quarterly</em> is an insightful and masterfully put-together magazine about finance, investing, and the global economy. </p>
+    </div>
+    <div id="right">
+        <img class="logo replaceLogo" src="assets/logo.svg" />
+    </div>
+</div>
+<div id="issues">
+    <div class="link">
+        <a id="i1" onclick="document.getElementById('issue1').scrollIntoView({behavior: 'smooth'});">ISSUE I</a>
+        <img src="assets/icon-arrow.svg" alt="arrow">
+    </div>
+    <br />
+    <div class="link">
+        <a id="i2" onclick="document.getElementById('issue2').scrollIntoView({behavior: 'smooth'});">ISSUE II</a>
+        <img src="assets/icon-arrow.svg" alt="arrow">
+    </div>
+</div>
+<div class="subscribe">
+    <div id="logo">
+        <img class="replaceLogo" src="assets/logo.svg" />
+    </div>
+    <div id="text">
+        <h2>Subscribe</h2>
+        <p>Receive future issues directly in your inbox.</p>
+        <button onclick="window.open('https://forms.gle/k7jvYSbeH7FtmACB8', '_blank');">Subscribe now</button>
+    </div>
+</div>
+
+<div id="colorTiles">
+    <div onclick="document.getElementById('issue1').scrollIntoView({behavior: 'smooth'});">Issue I</div>
+    <div onclick="document.getElementById('issue2').scrollIntoView({behavior: 'smooth'});">Issue II</div>
+    <div>Issue III (coming soon)</div>
+</div>
+
+<div class="issue" id="issue1">
+    <h1>Issue I</h1>
+    <div>
+        <button onclick="window.open('assets/VolumeI.pdf', '_blank');">Read</button>
+        <div class="contents">
+            <div class="contents-heading">
+                <h2>Contents</h2>
+            </div>
+            <div class="articles">
+                <div>US, China, EU Macroeconomic Outlook Late 2024 / Early 2024</div>
+                <div>Recommended Holding</div>
+                <div>Why Oil Prices are on the Rise, Again</div>
+                <div>Scrubbing Off The Green</div>
+                <div>Investing Concepts 1: Fundamental Analysis</div>
+            </div>
+        </div>
+        <div class="contributors">
+            <div class="contributors-heading">
+                <h2>Contributors</h2>
+            </div>
+            <div class="contributor-text">
+                <p>Written by Colin Ngan, Tim He, Sebastian Zhu; Layout by Justin Chen; Logo and cover by Felisha Wang</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="issue" id="issue2">
+    <h1>Issue II</h1>
+    <div>
+        <button onclick="window.open('assets/VolumeII.pdf', '_blank');">Read</button>
+        <div class="contents">
+            <div class="contents-heading">
+                <h2>Contents</h2>
+            </div>
+            <div class="articles">
+                <div>Hong Kong Economic Outlook 2024/2025</div>
+                <div>Hong Kong: Houses, Taxes, and Monopolies</div>
+                <div>What do Locals Think of Hong Kong's Housing Situation?</div>
+                <div>Recommended Holding</div>
+                <div>S&P’s New Record High, The Magnificent 7, and Stock Indexes</div>
+                <div>BYD: Pioneering Growth and Innovation in the Global EV Market</div>
+                <div>Investing Concepts 2: Technical Analysis</div>
+                <div>Dogecoin and Elon Musk</div>
+            </div>
+        </div>
+        <div class="contributors">
+            <div class="contributors-heading">
+                <h2>Contributors</h2>
+            </div>
+            <div class="contributor-text">
+                <p>Written by Colin Ngan, Tim He, Sebastian Zhu, Howard Deng, Konnor Wan; Layout by Justin Chen</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+<div id="footer">
+    <span>Have any inquires? Feel free to email us at </span>
+</div>
+-->
+
+</body>
+<script src="script.js"></script>
+</html>

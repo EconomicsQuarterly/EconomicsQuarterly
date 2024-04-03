@@ -1,0 +1,346 @@
+@font-face {
+    font-family: "DM Sans";
+    src: url("fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf");
+}
+
+@font-face {
+    font-family: "DM Sans";
+    font-style: italic;
+    src: url("fonts/DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf");
+}
+
+@font-face {
+    font-family: "PT Serif";
+    src: url("fonts/PT_Serif/PTSerif-Regular.ttf");
+}
+
+@font-face {
+    font-family: "PT Serif";
+    font-style: italic;
+    src: url("fonts/PT_Serif/PTSerif-Italic.ttf");
+}
+
+@font-face {
+    font-family: "PT Serif";
+    font-weight: bold;
+    src: url("fonts/PT_Serif/PTSerif-Bold.ttf");
+}
+
+@font-face {
+    font-family: "PT Serif";
+    font-weight: bold;
+    font-style: italic;
+    src: url("fonts/PT_Serif/PTSerif-BoldItalic.ttf");
+}
+
+:root {
+    --white: rgb(250, 250, 250);
+    --black: rgb(10, 10, 10);
+    --grey: rgb(98, 98, 98);
+    --1-primary: #255957;
+    --1-secondary: #cbf1ce;
+    --1-complement: #E6DC8C;
+    --2-primary: #274472;
+    --2-secondary: #d7e7ed;
+    --2-complement: #f4dbba;
+    --3-primary: #722410;
+    --3-secondary: #f4b6b0;
+    --3-complement: #f4f3b2;
+}
+
+#hero {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    box-sizing: border-box;
+
+    h1, p {
+        font-family: "PT Serif", "Georgia", serif;
+    }
+
+    h1 {
+        font-size: clamp(40pt, 10vw, 60pt);
+    }
+
+    p {
+        font-size: clamp(12pt, 2vw, 18pt);
+        line-height: 1.7;
+    }
+
+    #left {
+        width: 60vw;
+        padding: 20px;
+    }
+
+    #right {
+        width: 30vw;
+        vertical-align: middle;
+    }
+
+    .logo {
+        width: 100%;
+    }
+}
+
+#issues {
+    padding: 50px 50px 0 50px;
+
+    .link {
+        display: inline-block;
+        width: 30vw;
+        margin-bottom: 20px;
+    }
+
+    .link a {
+        font-size: 25pt;
+        display: inline;
+        text-decoration: none;
+        height: 100%;
+        padding: 0 10px 0 0;
+        line-height: 1.5;
+        transition: opacity 300ms, font-weight 300ms;
+        font-variant: small-caps;
+        font-family: "DM Sans", sans-serif;
+        font-weight: 1000;
+    }
+
+    .link img {
+        transition: opacity 300ms, transform 400ms;
+    }
+
+    .link:hover {
+        cursor: pointer;
+    }
+
+    .link:hover img {
+        transform: translateX(30%);
+        opacity: 0.5;
+    }
+
+    #i1 {
+        color: var(--1-primary);
+    }
+
+    #i2 {
+        color: var(--2-primary);
+    }
+
+    .link:hover #i1 {
+        opacity: .8;
+        font-weight: 100;
+    }
+
+    .link:hover #i2 {
+        opacity: .8;
+        font-weight: 100;
+    }
+}
+
+body {
+    transition: background-color 300ms;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.subscribe {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscribe #logo {
+    width: 20vw;
+    padding: 5%;
+}
+
+.subscribe #text {
+    width: 60vw;
+    margin-left: 30px;
+
+    h2, p {
+        font-family: "PT Serif", "Georgia", serif;
+    }
+}
+
+.subscribe #logo img {
+    width: 100%;
+}
+
+.subscribe button {
+    background-color: var(--black);
+    transition: opacity 300ms, background-color 300ms;
+    border: none;
+    border-radius: 5px;
+    font-family: "DM Sans", sans-serif;
+    color: var(--white);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.subscribe button:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+#colorTiles {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 200px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 30pt;
+}
+
+#colorTiles div {
+    padding: 20px;
+    flex: 1;
+}
+
+#colorTiles div:nth-child(1), #colorTiles div:nth-child(2), #colorTiles div:nth-child(3) {
+    font-weight: 300;
+    transition: font-weight 300ms, opacity 300ms, flex 800ms;
+}
+
+#colorTiles div:nth-child(1):hover, #colorTiles div:nth-child(2):hover, #colorTiles div:nth-child(3):hover {
+    font-weight: 1000;
+    opacity: 0.8;
+    flex: 1.5;
+    cursor: pointer;
+}
+
+#colorTiles div:nth-child(1) {
+    color: var(--1-secondary);
+    background-color: var(--1-primary);
+}
+
+#colorTiles div:nth-child(2) {
+    color: var(--2-secondary);
+    background-color: var(--2-primary);
+}
+
+#colorTiles div:nth-child(3) {
+    color: var(--3-secondary);
+    background-color: var(--3-primary);
+}
+
+#issue1 {
+    background-color: var(--1-primary);
+    color: var(--1-secondary);
+}
+
+#issue2 {
+    background-color: var(--2-primary);
+    color: var(--2-secondary);
+}
+
+#issue3 {
+    background-color: var(--3-primary);
+    color: var(--3-secondary);
+}
+
+#issue1 button {
+    background-color: var(--1-secondary);
+    color: var(--1-primary);
+}
+
+#issue2 button {
+    background-color: var(--2-secondary);
+    color: var(--2-primary);
+}
+
+.issue button {
+    transition: opacity 300ms, background-color 300ms;
+    border: none;
+    border-radius: 5px;
+    font-family: "DM Sans", sans-serif;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.issue button:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+.issue {
+    font-family: "DM Sans", sans-serif;
+    min-height: 190vh;
+    position: relative;
+}
+
+.issue h1, .issue h2 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.issue h1 {
+    position: sticky;
+    z-index: 1;
+    top: 30px;
+    font-size: 30vw;
+    opacity: 0.2;
+    padding: 2vw;
+}
+
+.issue > div {
+    position: relative;
+    z-index: 100;
+    padding: 30px;
+}
+
+.issue > div button {
+    float: right;
+    position: sticky;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+
+.issue .contents-heading {
+    font-size: clamp(40pt, 10vw, 100pt);
+}
+
+.issue .articles {
+    padding: 0 0 0 5vw;
+}
+
+.issue .articles div {
+    margin: 50px 0;
+    font-size: clamp(20pt, 5vw, 60pt);
+    transition: box-shadow 300ms, font-weight 500ms;
+}
+
+#issue1 .articles div:hover {
+    box-shadow: inset 0 -2px 0 0 var(--1-secondary);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#issue2 .articles div:hover {
+    box-shadow: inset 0 -2px 0 0 var(--2-secondary);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.issue .contributors h2 {
+    font-size: clamp(20pt, 4vw, 40pt);
+}
+
+.issue .contributor-text {
+    padding: 0 0 0 5vw;
+    font-size: clamp(12pt, 2vw, 18pt);
+}
+
+.issue .contributors {
+    margin: 20vh 0 50vh 0;
+}
