@@ -107,7 +107,7 @@
     }
 
     .link img {
-        transition: opacity 300ms, transform 400ms;
+        transition: opacity 300ms, transform 300ms;
     }
 
     .link:hover {
@@ -115,7 +115,7 @@
     }
 
     .link:hover img {
-        transform: translateX(30%);
+        transform: translateX(80%);
         opacity: 0.5;
     }
 
