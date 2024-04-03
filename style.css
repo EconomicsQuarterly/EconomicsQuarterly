@@ -49,7 +49,6 @@
     --4-primary: #b66a0e;
     --4-secondary: #ffd09a;
     --4-complement: #ede8d1;
-    /*todo: update here*/
 }
 
 #hero {
@@ -123,7 +122,6 @@
         opacity: 0.5;
     }
 
-    /*todo: update here*/
     #i1 {
         color: var(--1-primary);
     }
@@ -140,7 +138,7 @@
         color: var(--4-primary);
     }
 
-    .link:hover #i1, .link:hover #i2, .link:hover #i3, .link:hover #i4 { /*todo: update here*/
+    .link:hover #i1, .link:hover #i2, .link:hover #i3, .link:hover #i4 {
         opacity: .8;
         font-weight: 100;
     }
@@ -225,7 +223,6 @@ body {
     cursor: pointer;
 }
 
-/*todo: update here*/
 #colorTiles div:nth-child(1) {
     color: var(--1-secondary);
     background-color: var(--1-primary);
@@ -246,7 +243,6 @@ body {
     background-color: var(--4-primary);
 }
 
-/*todo: update here*/
 #issue1 {
     background-color: var(--1-primary);
     color: var(--1-secondary);
@@ -267,7 +263,6 @@ body {
     color: var(--4-secondary);
 }
 
-/*todo: update here*/
 #issue1 button {
     background-color: var(--1-secondary);
     color: var(--1-primary);
@@ -351,7 +346,6 @@ body {
     transition: box-shadow 300ms, font-weight 500ms;
 }
 
-/*todo: update here*/
 #issue1 .articles div:hover {
     box-shadow: inset 0 -2px 0 0 var(--1-secondary);
     cursor: pointer;
@@ -386,7 +380,7 @@ body {
 }
 
 .issue .contributors {
-    margin: 20vh 0 50vh 0;
+    margin: 20vh 0 35vh 0;
 }
 
 #footer {
