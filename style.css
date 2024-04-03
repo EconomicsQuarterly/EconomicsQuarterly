@@ -343,3 +343,17 @@ body {
 .issue .contributors {
     margin: 20vh 0 50vh 0;
 }
+
+#footer {
+    padding: 40px;
+    font-family: "DM Sans", sans-serif;
+
+    a {
+        transition: opacity 300ms;
+        color: inherit;
+    }
+
+    a:hover {
+        opacity: .6;
+    }
+}
