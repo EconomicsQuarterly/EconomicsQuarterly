@@ -46,6 +46,10 @@
     --3-primary: #722410;
     --3-secondary: #f4b6b0;
     --3-complement: #f4f3b2;
+    --4-primary: #b66a0e;
+    --4-secondary: #ffd09a;
+    --4-complement: #ede8d1;
+    /*todo: update here*/
 }
 
 #hero {
@@ -119,6 +123,7 @@
         opacity: 0.5;
     }
 
+    /*todo: update here*/
     #i1 {
         color: var(--1-primary);
     }
@@ -127,12 +132,15 @@
         color: var(--2-primary);
     }
 
-    .link:hover #i1 {
-        opacity: .8;
-        font-weight: 100;
+    #i3 {
+        color: var(--3-primary);
     }
 
-    .link:hover #i2 {
+    #i4 {
+        color: var(--4-primary);
+    }
+
+    .link:hover #i1, .link:hover #i2, .link:hover #i3, .link:hover #i4 { /*todo: update here*/
         opacity: .8;
         font-weight: 100;
     }
@@ -202,6 +210,7 @@ body {
 #colorTiles div {
     padding: 20px;
     flex: 1;
+    min-width: 25%;
 }
 
 #colorTiles div:nth-child(1), #colorTiles div:nth-child(2), #colorTiles div:nth-child(3) {
@@ -216,6 +225,7 @@ body {
     cursor: pointer;
 }
 
+/*todo: update here*/
 #colorTiles div:nth-child(1) {
     color: var(--1-secondary);
     background-color: var(--1-primary);
@@ -231,6 +241,12 @@ body {
     background-color: var(--3-primary);
 }
 
+#colorTiles div:nth-child(4) {
+    color: var(--4-secondary);
+    background-color: var(--4-primary);
+}
+
+/*todo: update here*/
 #issue1 {
     background-color: var(--1-primary);
     color: var(--1-secondary);
@@ -246,6 +262,12 @@ body {
     color: var(--3-secondary);
 }
 
+#issue4 {
+    background-color: var(--4-primary);
+    color: var(--4-secondary);
+}
+
+/*todo: update here*/
 #issue1 button {
     background-color: var(--1-secondary);
     color: var(--1-primary);
@@ -254,6 +276,16 @@ body {
 #issue2 button {
     background-color: var(--2-secondary);
     color: var(--2-primary);
+}
+
+#issue3 button {
+    background-color: var(--3-secondary);
+    color: var(--3-primary);
+}
+
+#issue4 button {
+    background-color: var(--4-secondary);
+    color: var(--4-primary);
 }
 
 .issue button {
@@ -319,6 +351,7 @@ body {
     transition: box-shadow 300ms, font-weight 500ms;
 }
 
+/*todo: update here*/
 #issue1 .articles div:hover {
     box-shadow: inset 0 -2px 0 0 var(--1-secondary);
     cursor: pointer;
@@ -327,6 +360,18 @@ body {
 
 #issue2 .articles div:hover {
     box-shadow: inset 0 -2px 0 0 var(--2-secondary);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#issue3 .articles div:hover {
+    box-shadow: inset 0 -2px 0 0 var(--3-secondary);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#issue4 .articles div:hover {
+    box-shadow: inset 0 -2px 0 0 var(--4-secondary);
     cursor: pointer;
     font-weight: 600;
 }

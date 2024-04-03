@@ -16,7 +16,7 @@
         <img class="logo replaceLogo" src="assets/logo.svg" alt=""/>
     </div>
 </div>
-<div id="issues">
+<div id="issues"> <!--todo: update here-->
     <div class="link">
         <a id="i1" onclick="document.getElementById('issue1').scrollIntoView({behavior: 'smooth'});">ISSUE I</a>
         <img src="assets/icon-arrow.svg" alt="arrow">
@@ -24,6 +24,11 @@
     <br />
     <div class="link">
         <a id="i2" onclick="document.getElementById('issue2').scrollIntoView({behavior: 'smooth'});">ISSUE II</a>
+        <img src="assets/icon-arrow.svg" alt="arrow">
+    </div>
+    <br />
+    <div class="link">
+        <a id="i3" onclick="document.getElementById('issue3').scrollIntoView({behavior: 'smooth'});">ISSUE III</a>
         <img src="assets/icon-arrow.svg" alt="arrow">
     </div>
 </div>
@@ -38,12 +43,14 @@
     </div>
 </div>
 
-<div id="colorTiles">
+<div id="colorTiles"> <!--todo: update here-->
     <div onclick="document.getElementById('issue1').scrollIntoView({behavior: 'smooth'});">Issue I</div>
     <div onclick="document.getElementById('issue2').scrollIntoView({behavior: 'smooth'});">Issue II</div>
-    <div>Issue III (coming soon)</div>
+    <div onclick="document.getElementById('issue3').scrollIntoView({behavior: 'smooth'});">Issue III</div>
+    <div>Issue IV (coming soon)</div>
 </div>
 
+<!--todo: update here-->
 <div class="issue" id="issue1">
     <h1>Issue I</h1>
     <div>
@@ -88,6 +95,29 @@
                 <div>BYD: Pioneering Growth and Innovation in the Global EV Market</div>
                 <div>Investing Concepts 2: Technical Analysis</div>
                 <div>Dogecoin and Elon Musk</div>
+            </div>
+        </div>
+        <div class="contributors">
+            <div class="contributors-heading">
+                <h2>Contributors</h2>
+            </div>
+            <div class="contributor-text">
+                <p>Written by Colin Ngan, Tim He, Sebastian Zhu, Howard Deng, Konnor Wan; Layout by Justin Chen</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="issue" id="issue3">
+    <h1>Issue III</h1>
+    <div>
+        <button onclick="window.open('assets/VolumeIII.pdf', '_blank');">Read</button>
+        <div class="contents">
+            <div class="contents-heading">
+                <h2>Contents</h2>
+            </div>
+            <div class="articles">
+                <div></div>
             </div>
         </div>
         <div class="contributors">
