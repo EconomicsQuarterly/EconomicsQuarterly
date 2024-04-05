@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Year 1: Economics Quarterly</title>
+    <link rel="icon" href="../assets/globe.png">
+    <link rel="stylesheet" href="highlightStyle.css">
+    <script src="d3.js"></script>
+  <script src="scrollama.js"></script>
+</head>
+<body>
+<div class="pre-hero">
+  <img src="../assets/icon-arrow.svg" alt="arrow">
+  <a href="../index.html">Go back home</a>
+</div>
+
+<div id="hero">
+  <img class="logo replaceLogo" src="../assets/logo.svg" alt=""/>
+  <div id="hero-text">
+    <h1 class="step">Economics Quarterly</h1>
+    <h2 class="step">Year 1</h2>
+    <h3 class="step">(2023/2024)</h3>
+  </div>
+</div>
+
+<div class="highlight step">
+  <h3>Highlight #1: Economics <span style="text-decoration: line-through;">Monthly</span> Quarterly.</h3>
+  <p>Yep. We changed our name <em>and</em> our frequency to reduce the load on
+    our writers and ensure quality content is delivered to our readers.</p>
+</div>
+
+<div class="highlight step">
+  <h3>Highlight #2: Welcome to the web!</h3>
+  <p>We pushed our archives onto the <a href="../index.html" target="_blank">web</a>, reducing the inconvenience of searching through <em>stacks</em> of emails to find a past issue.</p>
+  <iframe src="../index.html" style="height: 100vh; width: 100%; border: 2px solid var(--black)"></iframe>
+  <p>We hope you enjoyed browsing through it as much as we did! 😊</p>
+</div>
+
+<div class="highlight" id="stats">
+  <h3 class="step">Highlight #3:</h3>
+  <h2 class="step">4<br/> issues</h2>
+  <h2 class="step">__<br/> interviews</h2>
+  <h2 class="step">__<br/> articles</h2>
+  <h2 class="step">__<br/> words</h2>
+  <h2 class="step">__<br/> contributors</h2>
+</div>
+
+<div id="acknowledgements" class="step">
+  <h3>Acknowledgements: <br/>Our Team</h3>
+  <h6>Special thanks go to Mr. Dhakal for advice and help.</h6>
+  <h4>Writers</h4>
+  <p>Colin Ngan, Tim He, Sebastian Zhu, Howard Deng, Konnor Wan</p>
+  <h4>Layout and Design</h4>
+  <p>Justin Chen, Felisha Wang</p>
+</div>
+
+<div id="thankyou" class="step">
+  <h3>Thank you, avid readers. </h3>
+  <h6>Special thanks to our __ subscribers, you motivated us to continue our writing.</h6>
+  <canvas style="width: 100%; height: 100vh;" id="visualization"></canvas>
+</div>
+
+<div id="archive" class="step">
+  <h3 id="archive-title">2023-2024 Economics Quarterly Archive</h3>
+  <div id="archive-container">
+    <div class="issue-box" onclick="window.open('../assets/VolumeI.pdf', '_blank');">
+      <h4>Issue 1</h4>
+      <h5>October 2023</h5>
+      <div class="articles">
+        <div>US, China, EU Macroeconomic Outlook Late 2024 / Early 2024</div>
+        <div>Recommended Holding</div>
+        <div>Why Oil Prices are on the Rise, Again</div>
+        <div>Scrubbing Off The Green</div>
+        <div>Investing Concepts 1: Fundamental Analysis</div>
+      </div>
+    </div>
+    <div class="issue-box" onclick="window.open('../assets/VolumeII.pdf', '_blank');">
+      <h4>Issue 2</h4>
+      <h5>February 2024</h5>
+      <div class="articles">
+        <div>Hong Kong Economic Outlook 2024/2025</div>
+        <div>Hong Kong: Houses, Taxes, and Monopolies</div>
+        <div>What do Locals Think of Hong Kong’s Housing Situation?</div>
+        <div>Recommended Holding</div>
+        <div>S&P’s New Record High, The Magnificent 7, and Stock Indexes</div>
+        <div>BYD: Pioneering Growth and Innovation in the Global EV Market</div>
+        <div>Investing Concepts 2: Technical Analysis</div>
+        <div>Dogecoin and Elon Musk</div>
+      </div>
+    </div>
+    <div class="issue-box" onclick="window.open('../assets/VolumeIII.pdf', '_blank');">
+      <h4>Issue 3</h4>
+      <h5>April 2024</h5>
+      <div class="articles">
+        <div>Hong Kong Economic Outlook 2024/2025</div>
+        <div>Hong Kong: Houses, Taxes, and Monopolies</div>
+        <div>What do Locals Think of Hong Kong’s Housing Situation?</div>
+        <div>Recommended Holding</div>
+        <div>S&P’s New Record High, The Magnificent 7, and Stock Indexes</div>
+        <div>BYD: Pioneering Growth and Innovation in the Global EV Market</div>
+        <div>Investing Concepts 2: Technical Analysis</div>
+        <div>Dogecoin and Elon Musk</div>
+      </div>
+    </div>
+    <div class="issue-box" onclick="window.open('../assets/VolumeIV.pdf', '_blank');">
+      <h4>Issue 4</h4>
+      <h5>May 2024</h5>
+      <div class="articles">
+        <div>Hong Kong Economic Outlook 2024/2025</div>
+        <div>Hong Kong: Houses, Taxes, and Monopolies</div>
+        <div>What do Locals Think of Hong Kong’s Housing Situation?</div>
+        <div>Recommended Holding</div>
+        <div>S&P’s New Record High, The Magnificent 7, and Stock Indexes</div>
+        <div>BYD: Pioneering Growth and Innovation in the Global EV Market</div>
+        <div>Investing Concepts 2: Technical Analysis</div>
+        <div>Dogecoin and Elon Musk</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="subscribe">
+  <div id="logo">
+    <img class="replaceLogo" src="../assets/logo.svg" alt=""/>
+  </div>
+  <div id="text">
+    <h2>Subscribe</h2>
+    <p>Receive future issues directly in your inbox.</p>
+    <button onclick="window.open('https://forms.gle/k7jvYSbeH7FtmACB8', '_blank');">Subscribe now</button>
+  </div>
+</div>
+
+<div class="pre-hero">
+  <img src="../assets/icon-arrow.svg" alt="arrow">
+  <a href="../index.html">Go back home</a>
+</div>
+</body>
+
+<script src="scroll.js"></script>
+<script defer src="highlightScript.js" type="module"></script>
+</html>
