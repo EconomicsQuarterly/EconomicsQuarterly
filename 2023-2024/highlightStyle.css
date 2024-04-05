@@ -78,6 +78,10 @@ body {
     }
 }
 
+.pre-hero:hover {
+    cursor: pointer;
+}
+
 .pre-hero:hover a {
     font-weight: 200;
 }
