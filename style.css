@@ -49,6 +49,21 @@
     --4-primary: #9d5600;
     --4-secondary: #ffd09a;
     --4-complement: #fff5c5;
+    --5-primary: #69418b;
+    --5-secondary: #e7b0f8;
+    --5-complement: #fdf2ba;
+    --6-primary: #2d590c;
+    --6-secondary: #c7e4b1;
+    --6-complement: #f8f1ae;
+    --7-primary: #1d7a92;
+    --7-secondary: #9bdaeb;
+    --7-complement: #fdf2ba;
+    --8-primary: #866225;
+    --8-secondary: #f1d19a;
+    --8-complement: #fffbb6;
+    --9-primary: #861a51;
+    --9-secondary: #fdc5e1;
+    --9-complement: #faf7c6;
 }
 
 #hero {
