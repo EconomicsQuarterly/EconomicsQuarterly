@@ -3,68 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <title>Economics Quarterly Archives</title>
-    <style>
-        .pre-hero {
-            font-family: "DM Sans", sans-serif;
-            font-weight: 600;
-            padding: 40px 20px 40px 20px;
-            display: inline-block;
-
-            a {
-                transition: font-weight 300ms;
-                margin-left: 25px;
-                color: inherit;
-                text-decoration: none;
-                border-bottom: 1px solid var(--black);
-            }
-
-            img {
-                transform: rotate(180deg) translateX(-20%);
-                transition: transform 300ms;
-            }
-        }
-
-        .pre-hero:hover {
-            cursor: pointer;
-        }
-
-        .pre-hero:hover a {
-            font-weight: 200;
-        }
-
-        .pre-hero:hover img {
-            transform: rotate(180deg) ;
-        }
-
-        .yearBlock {
-            font-family: "DM Sans", sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="stylesheets/archive.css">
+    <link rel="stylesheet" href="stylesheets/include.css">
 </head>
 <body>
-<div class="pre-hero" onclick="window.location.href = '../index.html';">
-    <img src="../assets/icon-arrow.svg" alt="arrow">
-    <a href="../index.html">Go back home</a>
+<div class="pre-hero" onclick="window.location.href = 'index.html';">
+    <img src="assets/icon-arrow.svg" alt="arrow">
+    <a href="index.html">Go back home</a>
 </div>
 
-<div class="yearBlock">
+<div id="toc">
+    <h1>Archives</h1>
+    <h2>By year</h2>
+    <div>
+        <a onclick="document.getElementById('2023-2024').scrollIntoView({behavior: 'smooth'});">2023-2024</a>
+    </div>
+</div>
+
+<div class="yearBlock" id="2023-2024">
     <h1 class="yearText">2023-2024</h1>
     <div class="posts">
         <div class="post">
-            <p>April 2024</p>
-            <a>2023-2024 Investor Challenge</a>
+            <p>October 2023</p>
+            <a href="assets/VolumeI.pdf" target="_blank">Issue I released</a>
         </div>
         <div class="post">
             <p>February 2024</p>
-            <a>Issue II released</a>
+            <a href="assets/VolumeII.pdf" target="_blank">Issue II released</a>
         </div>
         <div class="post">
-            <p>October 2023</p>
-            <a>Issue I released</a>
+            <p>April 2024</p>
+            <a href="2023-2024/investor-challenge.html">2023-2024 Investor Challenge</a>
         </div>
     </div>
-    <div class="issues">
-        <h2>Issues</h2>
+</div>
+<div class="issues">
+    <div id="archive" class="step">
+        <h3 id="archive-title">2023-2024 Economics Quarterly Archive</h3>
+        <div id="archive-container">
+            <div class="issue-box" onclick="window.open('assets/VolumeI.pdf', '_blank');">
+                <h4>Issue 1</h4>
+                <h5>October 2023</h5>
+                <div class="articles">
+                    <div>US, China, EU Macroeconomic Outlook Late 2024 / Early 2024</div>
+                    <div>Recommended Holding</div>
+                    <div>Why Oil Prices are on the Rise, Again</div>
+                    <div>Scrubbing Off The Green</div>
+                    <div>Investing Concepts 1: Fundamental Analysis</div>
+                </div>
+            </div>
+            <div class="issue-box" onclick="window.open('assets/VolumeII.pdf', '_blank');">
+                <h4>Issue 2</h4>
+                <h5>February 2024</h5>
+                <div class="articles">
+                    <div>Hong Kong Economic Outlook 2024/2025</div>
+                    <div>Hong Kong: Houses, Taxes, and Monopolies</div>
+                    <div>What do Locals Think of Hong Kong’s Housing Situation?</div>
+                    <div>Recommended Holding</div>
+                    <div>S&P’s New Record High, The Magnificent 7, and Stock Indexes</div>
+                    <div>BYD: Pioneering Growth and Innovation in the Global EV Market</div>
+                    <div>Investing Concepts 2: Technical Analysis</div>
+                    <div>Dogecoin and Elon Musk</div>
+                </div>
+            </div>
+            <!-- todo replace
+            <div class="issue-box" onclick="window.open('assets/VolumeIII.pdf', '_blank');">
+                <h4>Issue 3</h4>
+                <h5>April 2024</h5>
+                <div class="articles">
+                    <div>Hong Kong Economic Outlook 2024/2025</div>
+                    <div>Hong Kong: Houses, Taxes, and Monopolies</div>
+                    <div>What do Locals Think of Hong Kong’s Housing Situation?</div>
+                    <div>Recommended Holding</div>
+                    <div>S&P’s New Record High, The Magnificent 7, and Stock Indexes</div>
+                    <div>BYD: Pioneering Growth and Innovation in the Global EV Market</div>
+                    <div>Investing Concepts 2: Technical Analysis</div>
+                    <div>Dogecoin and Elon Musk</div>
+                </div>
+            </div>
+            <div class="issue-box" onclick="window.open('assets/VolumeIV.pdf', '_blank');">
+                <h4>Issue 4</h4>
+                <h5>May 2024</h5>
+                <div class="articles">
+                    <div>Hong Kong Economic Outlook 2024/2025</div>
+                    <div>Hong Kong: Houses, Taxes, and Monopolies</div>
+                    <div>What do Locals Think of Hong Kong’s Housing Situation?</div>
+                    <div>Recommended Holding</div>
+                    <div>S&P’s New Record High, The Magnificent 7, and Stock Indexes</div>
+                    <div>BYD: Pioneering Growth and Innovation in the Global EV Market</div>
+                    <div>Investing Concepts 2: Technical Analysis</div>
+                    <div>Dogecoin and Elon Musk</div>
+                </div>
+            </div>
+            -->
+        </div>
     </div>
 </div>
 </body>
