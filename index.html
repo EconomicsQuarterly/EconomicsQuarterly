@@ -3,10 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>Economics Quarterly</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylesheets/index.css">
     <link rel="icon" href="assets/globe.png">
+    <style>
+        #event {
+            opacity: 1;
+            transition: opacity 300ms;
+            padding: 6vw 4vw;
+            display: flex;
+            font-family: "DM Sans", sans-serif;
+            h1 {
+                font-variant: small-caps;
+            }
+            #event-left {
+                width: 60vw;
+            }
+            #event-right {
+                width: 30vw;
+            }
+            #event-right img {
+                width: 100%;
+            }
+            p {
+                margin-top: 30px;
+            }
+        }
+
+        #event:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
+<div id="event" onclick="window.location.href = '2023-2024/investor-challenge.html'">
+    <div id="event-left">
+        <h1>INVESTOR CHALLENGE</h1>
+            <p>Are you intrigued by the world of finance and investing? Here’s an exciting opportunity to explore financial markets in a risk-free environment.</p>
+            <a href="2023-2024/investor-challenge.html" style="border-bottom: 1px solid; text-decoration: none; color: inherit;">Read more...</a>
+    </div>
+    <div id="event-right">
+        <img src="assets/comp.png">
+    </div>
+</div>
 <div id="hero">
     <div id="left">
         <h1>Economics Quarterly</h1>
@@ -142,5 +181,5 @@
 </div>
 
 </body>
-<script src="script.js"></script>
+<script src="scripts/script.js"></script>
 </html>

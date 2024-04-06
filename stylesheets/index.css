@@ -1,36 +1,36 @@
 @font-face {
     font-family: "DM Sans";
-    src: url("fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf");
+    src: url("../fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf");
 }
 
 @font-face {
     font-family: "DM Sans";
     font-style: italic;
-    src: url("fonts/DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf");
+    src: url("../fonts/DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf");
 }
 
 @font-face {
     font-family: "PT Serif";
-    src: url("fonts/PT_Serif/PTSerif-Regular.ttf");
+    src: url("../fonts/PT_Serif/PTSerif-Regular.ttf");
 }
 
 @font-face {
     font-family: "PT Serif";
     font-style: italic;
-    src: url("fonts/PT_Serif/PTSerif-Italic.ttf");
+    src: url("../fonts/PT_Serif/PTSerif-Italic.ttf");
 }
 
 @font-face {
     font-family: "PT Serif";
     font-weight: bold;
-    src: url("fonts/PT_Serif/PTSerif-Bold.ttf");
+    src: url("../fonts/PT_Serif/PTSerif-Bold.ttf");
 }
 
 @font-face {
     font-family: "PT Serif";
     font-weight: bold;
     font-style: italic;
-    src: url("fonts/PT_Serif/PTSerif-BoldItalic.ttf");
+    src: url("../fonts/PT_Serif/PTSerif-BoldItalic.ttf");
 }
 
 :root {

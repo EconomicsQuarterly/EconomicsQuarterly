@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2023-2024 Investor Challenge</title>
+    <style>
+        :root {
+            --white: rgb(250, 250, 250);
+            --black: rgb(10, 10, 10);
+        }
+        body {
+            margin: 0;
+            background: var(--white);
+        }
+        #event {
+            padding: 2vw 2vw 6vw 4vw;
+            display: flex;
+            flex-wrap: wrap;
+            font-family: "DM Sans", sans-serif;
+            > div {
+                padding: 3vw;
+            }
+            #date {
+                max-width: fit-content;
+            }
+            #event-left h1 {
+                font-variant: small-caps;
+            }
+            #event-left {
+                max-width: 50vw;
+            }
+
+            #event-right {
+                width: 60vw;
+            }
+
+            #event-right img {
+                width: 100%;
+            }
+
+            p {
+                margin-top: 30px;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+                border-bottom: 1px solid var(--black);
+                opacity: 1;
+                transition: opacity 300ms;
+            }
+
+            a:hover {
+                opacity: 0.6;
+            }
+        }
+
+        .pre-hero {
+            font-family: "DM Sans", sans-serif;
+            font-weight: 600;
+            padding: 40px 20px 40px 20px;
+            display: inline-block;
+
+            a {
+                transition: font-weight 300ms;
+                margin-left: 25px;
+                color: inherit;
+                text-decoration: none;
+                border-bottom: 1px solid var(--black);
+            }
+
+            img {
+                transform: rotate(180deg) translateX(-20%);
+                transition: transform 300ms;
+            }
+        }
+
+        .pre-hero:hover {
+            cursor: pointer;
+        }
+
+        .pre-hero:hover a {
+            font-weight: 200;
+        }
+
+        .pre-hero:hover img {
+            transform: rotate(180deg) ;
+        }
+
+        #date {
+            font-family: "DM Sans", sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="pre-hero" onclick="window.location.href = '../index.html';">
+    <img src="../assets/icon-arrow.svg" alt="arrow">
+    <a href="../index.html">Go back home</a>
+</div>
+<div id="event">
+    <div id="date">
+        <h1>April 2024</h1>
+    </div>
+    <div id="event-left">
+        <div id="event-right">
+            <img src="../assets/comp.png">
+        </div>
+        <h1>INVESTOR CHALLENGE</h1>
+        <p>Are you intrigued by the world of finance and investing? Here’s an exciting opportunity to explore financial markets in a risk-free environment.</p>
+        <p>This challenge allows you to experience the thrill of trading stocks, options, and other instruments without risking any real money.
+            It’s a unique chance to develop your analytical skills, understand market dynamics, and make strategic investment decisions, all while having
+            fun and learning valuable lessons.</p>
+        <p>To add some friendly competition, <strong>prizes will be awarded to the top three participants</strong> with the highest-ranking portfolios,
+            and their names will be listed on Economics Quarterly’s website. However, the true value lies in the experience
+            itself – the knowledge gained, the critical thinking developed, and the insight into the fascinating world of finance.</p>
+        <p>The goal of this challenge is to provide an engaging and educational platform for students to explore their interests
+            in investing, without any material risk. Whether you’re a seasoned trader or a curious newcomer, this is your chance
+            to dive into the financial markets and embark on an enriching journey.</p>
+        <p>Don’t miss out on this unique opportunity to gain practical experience, sharpen your skills, and discover your
+            passion for finance.</p>
+        <a href="https://forms.gle/dyHbjQMx5Wp4UT1x8" target="_blank">Investor Challenge Sign-up</a>
+    </div>
+</div>
+</body>
+</html>
