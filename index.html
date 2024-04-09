@@ -29,9 +29,13 @@
                 padding: 1vw;
             }
             #event-right {
-                width: 35vw;
+                @media only screen and (max-width: 600px) {
+                    width: 80vw;
+                }
+                @media only screen and (min-width: 600px) {
+                    width: 35vw;
+                }
                 padding: 1vw;
-                min-width: 350px;
             }
             #event-right img {
                 width: 100%;
