@@ -109,8 +109,10 @@ body {
         .post {
             display: flex;
             font-size: 14pt;
+            justify-content: start;
             p {
-                min-width: 15vw;
+                min-width: inherit;
+                width: 15vw;
                 font-weight: bold;
                 display: inline-block;
                 margin-block-start: 0;
@@ -123,6 +125,8 @@ body {
                 margin: 20px;
                 color: inherit;
                 text-decoration: none;
+                height: fit-content;
+                vertical-align: center;
                 box-shadow: inset 0 -2px 0 0 var(--black);
                 transition: box-shadow 300ms, font-weight 500ms;
                 font-weight: normal;

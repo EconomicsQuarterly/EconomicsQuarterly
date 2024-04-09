@@ -358,6 +358,7 @@ body {
 .issue .contributor-text {
     padding: 0 0 0 5vw;
     font-size: clamp(12pt, 2vw, 18pt);
+    line-height: 1.7;
 }
 
 .issue .contributors {
