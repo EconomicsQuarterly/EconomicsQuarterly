@@ -12,7 +12,7 @@
     }
 
     h1 {
-        font-size: clamp(40pt, 10vw, 60pt);
+        font-size: clamp(30pt, 10vw, 60pt);
     }
 
     p {
@@ -314,7 +314,7 @@ body {
 }
 
 .issue .contents-heading {
-    font-size: clamp(40pt, 10vw, 100pt);
+    font-size: clamp(30pt, 10vw, 100pt);
 }
 
 .issue .articles {
