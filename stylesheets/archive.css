@@ -109,20 +109,34 @@ body {
         .post {
             display: flex;
             font-size: 14pt;
-            justify-content: start;
+            justify-content: space-between;
             p {
-                min-width: inherit;
+                max-width: fit-content;
                 width: 15vw;
                 font-weight: bold;
                 display: inline-block;
                 margin-block-start: 0;
                 margin-block-end: 0;
-                margin: 20px;
-                text-align: right;
+                @media only screen and (max-width: 600px) {
+                    margin: 5px;
+                    text-align: left;
+                }
+                @media only screen and (min-width: 600px) {
+                    margin: 20px;
+                    text-align: right;
+                }
             }
             a {
                 display: inline-block;
-                margin: 20px;
+                max-width: fit-content;
+                @media only screen and (max-width: 600px) {
+                    margin: 5px;
+                    text-align: right;
+                }
+                @media only screen and (min-width: 600px) {
+                    margin: 20px;
+                    text-align: left;
+                }
                 color: inherit;
                 text-decoration: none;
                 height: fit-content;
