@@ -40,7 +40,7 @@ body {
     font-family: "DM Sans", sans-serif;
     padding: 3vw;
     #archive-title {
-        font-size: 3vw;
+        font-size: clamp(24pt, 3vw, 3vw);
         margin-block-start: 0;
         margin-block-end: 0;
     }
@@ -98,7 +98,7 @@ body {
     font-family: "DM Sans", sans-serif;
     padding: 3vw;
     .yearText {
-        font-size: 5vw;
+        font-size: clamp(35pt, 5vw, 5vw);
         margin-block-start: 0;
         margin-block-end: 0;
     }
@@ -139,10 +139,10 @@ body {
     font-family: "DM Sans", sans-serif;
     padding: 3vw;
     h1 {
-        font-size: 9vw;
+        font-size: clamp(50pt, 9vw, 9vw);
     }
     h2 {
-        font-size: 3vw;
+        font-size: clamp(15pt, 3vw, 3vw);
     }
     a {
         text-decoration: none;

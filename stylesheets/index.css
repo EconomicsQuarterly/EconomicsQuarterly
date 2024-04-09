@@ -1,6 +1,7 @@
 #hero {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     padding: 30px;
@@ -25,7 +26,12 @@
     }
 
     #right {
-        width: 30vw;
+        @media only screen and (max-width: 600px) {
+            width: 60vw;
+        }
+        @media only screen and (min-width: 600px) {
+            width: 30vw;
+        }
         vertical-align: middle;
     }
 
@@ -39,6 +45,7 @@
 
     .link {
         display: inline-block;
+        min-width: fit-content;
         width: 30vw;
         margin-bottom: 20px;
     }

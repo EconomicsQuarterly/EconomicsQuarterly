@@ -14,10 +14,15 @@ body {
         max-width: fit-content;
     }
     #event-left h1 {
-        font-variant: small-caps;
+        font-size: clamp(24pt, 3.5vw, 3.5vw);
     }
     #event-left {
-        max-width: 50vw;
+        @media only screen and (max-width: 600px) {
+            max-width: 80vw;
+        }
+        @media only screen and (min-width: 600px) {
+            max-width: 50vw;
+        }
     }
 
     #event-right {

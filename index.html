@@ -12,21 +12,33 @@
             transition: opacity 300ms;
             padding: 6vw 4vw;
             display: flex;
+            flex-wrap: wrap-reverse;
             font-family: "DM Sans", sans-serif;
             h1 {
-                font-variant: small-caps;
+                font-size: 3em;
             }
             #event-left {
-                width: 60vw;
+                @media only screen and (max-width: 600px) {
+                    width: 80vw;
+                }
+                @media only screen and (min-width: 600px) {
+                    width: 50vw;
+                }
+
+                padding: 1vw;
             }
             #event-right {
-                width: 30vw;
+                width: 35vw;
+                padding: 1vw;
+                min-width: 350px;
             }
             #event-right img {
                 width: 100%;
             }
             p {
                 margin-top: 30px;
+                font-size: 12pt;
+                line-height: 1.7;
             }
         }
 
@@ -39,7 +51,7 @@
 <body>
 <div id="event" onclick="window.location.href = '2023-2024/investor-challenge.html'">
     <div id="event-left">
-        <h1>INVESTOR CHALLENGE</h1>
+        <h1>Investor Challenge</h1>
             <p>Are you intrigued by the world of finance and investing? Here’s an exciting opportunity to explore financial markets in a risk-free environment.</p>
             <a href="2023-2024/investor-challenge.html" style="border-bottom: 1px solid; text-decoration: none; color: inherit;">Read more...</a>
     </div>
