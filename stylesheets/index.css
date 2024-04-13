@@ -298,7 +298,7 @@ body {
     z-index: 1;
     top: 30px;
     font-size: 30vw;
-    opacity: 0.2;
+    opacity: 0.1;
     padding: 2vw;
 }
 
@@ -316,7 +316,7 @@ body {
 }
 
 .issue .contents-heading {
-    font-size: clamp(30pt, 10vw, 100pt);
+    font-size: clamp(30pt, 10vw, 80pt);
 }
 
 .issue .articles {
@@ -325,7 +325,7 @@ body {
 
 .issue .articles div {
     margin: 50px 0;
-    font-size: clamp(20pt, 5vw, 60pt);
+    font-size: clamp(20pt, 5vw, 45pt);
     transition: box-shadow 300ms, font-weight 500ms;
 }
 
