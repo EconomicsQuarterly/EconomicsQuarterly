@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="stylesheets/include.css">
     <link rel="icon" href="assets/globe.png">
     <style>
-        #event {
+        .event {
             opacity: 1;
             transition: opacity 300ms;
-            padding: 6vw 4vw;
+            /*padding: 6vw 4vw;*/
+            padding: 4vw 4vw 4vw 4vw;
+            border-bottom: 1px dashed;
             display: flex;
             flex-wrap: wrap-reverse;
             font-family: "DM Sans", sans-serif;
             h1 {
                 font-size: 3em;
             }
-            #event-left {
+            .event-left {
                 @media only screen and (max-width: 600px) {
                     width: 80vw;
                 }
@@ -28,7 +30,7 @@
 
                 padding: 1vw;
             }
-            #event-right {
+            .event-right {
                 @media only screen and (max-width: 600px) {
                     width: 80vw;
                 }
@@ -37,7 +39,7 @@
                 }
                 padding: 1vw;
             }
-            #event-right img {
+            .event-right img {
                 width: 100%;
             }
             p {
@@ -47,7 +49,7 @@
             }
         }
 
-        #event:hover {
+        .event:hover {
             opacity: 0.7;
             cursor: pointer;
         }
@@ -55,13 +57,20 @@
     <script src="scripts/analytics.js"></script>
 </head>
 <body>
-<div id="event" onclick="window.location.href = '2023-2024/investor-challenge.html'">
-    <div id="event-left">
+<div style="" class="event" onclick="window.location.href = '2023-2024/recruit.html'">
+    <div class="event-left">
+        <h1>We’re recruiting!</h1>
+        <p></p>
+        <a href="2023-2024/recruit.html" style="border-bottom: 1px solid; text-decoration: none; color: inherit;">Read more...</a>
+    </div>
+</div>
+<div class="event" onclick="window.location.href = '2023-2024/investor-challenge.html'">
+    <div class="event-left">
         <h1>Investor Challenge</h1>
             <p>Are you intrigued by the world of finance and investing? Here’s an exciting opportunity to explore financial markets in a risk-free environment.</p>
             <a href="2023-2024/investor-challenge.html" style="border-bottom: 1px solid; text-decoration: none; color: inherit;">Read more...</a>
     </div>
-    <div id="event-right">
+    <div class="event-right">
         <img src="assets/comp.png">
     </div>
 </div>

@@ -110,6 +110,7 @@ body {
             display: flex;
             font-size: 14pt;
             justify-content: space-between;
+            transition: background-color 300ms;
             p {
                 max-width: fit-content;
                 width: 15vw;
@@ -145,7 +146,12 @@ body {
                 transition: box-shadow 300ms, font-weight 500ms;
                 font-weight: normal;
             }
-            a:hover {
+        }
+
+        .post:hover {
+            background-color: white;
+            cursor: pointer;
+            a {
                 font-weight: 200;
                 box-shadow: inset 0 -1px 0 0 var(--black);
             }
