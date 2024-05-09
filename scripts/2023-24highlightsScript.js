@@ -1,7 +1,7 @@
 let canvas = document.querySelector("#visualization");
 let height = canvas.offsetHeight, width = canvas.offsetWidth;
 const context = canvas.getContext("2d");
-const colors = ["#255957","#274472", "#722410", "#b66a0e"];
+const colors = ["#255957", "#274472", "#722410", "#b66a0e"];
 let data = setup();
 const color = (value) => colors[value];
 window.onresize = () => data = setup();
@@ -15,7 +15,7 @@ function setup() {
 
   let result = [];
   let k = width / 200;
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 70; i++) {
     result.push({r: k, group: Math.floor(Math.random() * 4)});
   }
   return result;

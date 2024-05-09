@@ -1,6 +1,6 @@
 const scroller = scrollama();
-let enterFunctions = [[textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor]];
-let exitFunctions = [[textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus]];
+// let enterFunctions = [[textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor], [textFocus, changeColor]];
+// let exitFunctions = [[textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus], [textUnfocus]];
 
 window.onbeforeunload = () => window.scrollTo(0, 0);
 
@@ -10,18 +10,11 @@ scroller
     step: ".step",
   })
   .onStepEnter((response) => {
-    if (enterFunctions[response.index] !== null) {
-      for (let i = 0; i < enterFunctions[response.index].length; i++) {
-        enterFunctions[response.index][i](response);
-      }
-    }
+    textFocus(response);
+    changeColor(response);
   })
   .onStepExit((response) => {
-    if (exitFunctions[response.index] !== null) {
-      for (let i = 0; i < exitFunctions[response.index].length; i++) {
-        exitFunctions[response.index][i](response);
-      }
-    }
+    textUnfocus(response);
   });
 
 function textFocus(response) {
@@ -37,8 +30,8 @@ function changeColor(response) {
     case 0:
     case 1:
     case 2:
-    case 12:
-    case 13:
+    case 14:
+    case 15:
       document.body.style["color"] = "var(--black)";
       document.body.style["background-color"] = "var(--white)";
       document.querySelectorAll(".replaceLogo")[0].src = "../assets/logo.svg";
@@ -59,11 +52,13 @@ function changeColor(response) {
     case 8:
     case 9:
     case 10:
+    case 11:
+    case 12:
       document.body.style["color"] = "var(--3-primary)";
       document.body.style["background-color"] = "var(--3-secondary)";
       document.querySelectorAll(".replaceLogo")[0].src = "../assets/logo-i3.svg";
       break;
-    case 11:
+    case 13:
       document.body.style["color"] = "var(--4-primary)";
       document.body.style["background-color"] = "var(--4-secondary)";
       document.querySelectorAll(".replaceLogo")[0].src = "../assets/logo-i4.svg";
