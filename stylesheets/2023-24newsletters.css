@@ -161,6 +161,7 @@ body {
 a {
     color: var(--2-primary);
     transition: opacity 300ms;
+    word-wrap: break-word;
 }
 
 a:hover {
