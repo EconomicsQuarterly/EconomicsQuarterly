@@ -112,6 +112,7 @@ body {
                 max-width: 30vw;
                 min-width: 100px;
                 padding: 2vw;
+                height: fit-content;
             }
 
             .right {
