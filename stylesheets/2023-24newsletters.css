@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.pre-hero {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    padding: 40px 20px 40px 20px;
+    display: inline-block;
+
+    a {
+        transition: font-weight 300ms;
+        margin-left: 25px;
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px solid var(--black);
+    }
+
+    img {
+        transform: rotate(180deg) translateX(-20%);
+        transition: transform 300ms;
+    }
+}
+
+.pre-hero:hover {
+    cursor: pointer;
+}
+
+.pre-hero:hover a {
+    font-weight: 200;
+}
+
+.pre-hero:hover img {
+    transform: rotate(180deg);
+}
+
+.post {
+    padding: 11vw;
+    width: 100%;
+    box-sizing: border-box;
+
+    .separator {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        height: 10px;
+        width: 100%;
+        background-color: var(--2-primary);
+    }
+
+    .border {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        height: 3px;
+        width: 100%;
+        background-color: var(--2-primary);
+    }
+
+    .newsletter-header {
+        display: flex;
+        flex-wrap: wrap;
+        @media only screen and (max-width: 1100px) {
+            justify-content: center;
+        }
+        @media only screen and (min-width: 1100px) {
+            justify-content: space-between;
+        }
+
+        .left, .right {
+            @media only screen and (max-width: 1100px) {
+                max-width: 100vw;
+            }
+            @media only screen and (min-width: 1100px) {
+                max-width: 50vw;
+            }
+        }
+
+        .logo {
+            width: clamp(100px, 35vw, 300px);
+            padding: 20px;
+        }
+
+        .title {
+            font-family: "PT Serif", georgia, serif;
+            font-size: clamp(24pt, 7vw, 40pt);
+        }
+
+        h2 {
+            font-family: "DM Sans", sans-serif;
+            font-size: clamp(18pt, 5vw, 32pt);
+        }
+    }
+
+    .greeting {
+        font-family: "DM Sans", sans-serif;
+        line-height: 1.4;
+        font-size: 14pt;
+    }
+
+    .news-item {
+        .news-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .left, .right {
+                min-width: fit-content;
+            }
+
+            img {
+                max-width: 30vw;
+                min-width: 100px;
+                padding: 2vw;
+            }
+
+            .right {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .news-title, .news-subtitle, .author {
+                font-family: "DM Sans", sans-serif;
+                font-size: 15pt;
+            }
+
+            .news-title {
+                font-weight: bold;
+            }
+
+            .news-subtitle {
+                font-style: italic;
+            }
+
+            .author {
+                margin-top: 1em;
+                margin-bottom: 1em;
+            }
+
+            h2 {
+                font-family: "DM Sans", sans-serif;
+                font-size: clamp(18pt, 5vw, 32pt);
+            }
+        }
+
+        .news-body {
+            font-family: "PT Serif", "Georgia", serif;
+            line-height: 1.5;
+        }
+    }
+
+    .footer {
+        font-family: "DM Sans", sans-serif;
+        font-size: 14pt;
+        line-height: 1.7;
+    }
+}
+
+a {
+    color: var(--2-primary);
+    transition: opacity 300ms;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+#toc {
+    padding: 2vw 8vw;
+
+    div {
+        display: inline-block;
+        margin: 1vw;
+        font-family: "DM Sans", sans-serif;
+        font-size: 14pt;
+        font-weight: 600;
+        text-decoration: none;
+        transition: font-weight 300ms;
+        border-bottom: 1px solid var(--black);
+    }
+
+    div:hover {
+        cursor: pointer;
+        font-weight: 200;
+    }
+}
