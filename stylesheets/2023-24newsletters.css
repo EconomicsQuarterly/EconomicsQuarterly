@@ -111,7 +111,7 @@ body {
             img {
                 min-width: 100px;
                 padding: 2vw;
-                height: fit-content;
+                height: min-content;
                 @media only screen and (max-width: 700px) {
                     max-width: 70vw;
                 }
