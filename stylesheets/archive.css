@@ -33,12 +33,13 @@ body {
 }
 
 .pre-hero:hover img {
-    transform: rotate(180deg) ;
+    transform: rotate(180deg);
 }
 
 #archive {
     font-family: "DM Sans", sans-serif;
     padding: 3vw;
+
     #archive-title {
         font-size: clamp(24pt, 3vw, 3vw);
         margin-block-start: 0;
@@ -51,6 +52,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     justify-items: center;
+
     .issue-box {
         padding: 2vw;
         min-width: 150px;
@@ -99,6 +101,7 @@ body {
 .yearBlock {
     font-family: "DM Sans", sans-serif;
     padding: 3vw;
+
     .yearText {
         font-size: clamp(35pt, 5vw, 5vw);
         margin-block-start: 0;
@@ -113,6 +116,7 @@ body {
             font-size: 14pt;
             justify-content: space-between;
             transition: background-color 300ms, box-shadow 300ms;
+
             p {
                 max-width: fit-content;
                 width: 15vw;
@@ -129,6 +133,7 @@ body {
                     text-align: right;
                 }
             }
+
             a {
                 display: inline-block;
                 max-width: fit-content;
@@ -153,6 +158,7 @@ body {
             background-color: white;
             box-shadow: 0 1px 10px -6px rgba(31, 31, 31, 0.37);
             cursor: pointer;
+
             a {
                 font-weight: 200;
                 box-shadow: inset 0 -1px 0 0 var(--black);
@@ -163,7 +169,8 @@ body {
 
 .newsletter {
     font-family: "DM Sans", sans-serif;
-    padding: 4vw 3vw;
+    padding: 6vh 3vw;
+
     h1 {
         font-size: clamp(24pt, 3vw, 3vw);
         margin-block-start: 0;
@@ -176,6 +183,7 @@ body {
         transition: box-shadow 300ms, font-weight 500ms;
         font-weight: bold;
     }
+
     h1:hover {
         cursor: pointer;
         font-weight: 400;
@@ -186,18 +194,22 @@ body {
 #toc {
     font-family: "DM Sans", sans-serif;
     padding: 3vw;
+
     h1 {
         font-size: clamp(50pt, 9vw, 9vw);
     }
+
     h2 {
         font-size: clamp(15pt, 3vw, 3vw);
     }
+
     a {
         text-decoration: none;
         opacity: 1;
         transition: opacity 300ms;
         border-bottom: 1px solid;
     }
+
     a:hover {
         cursor: pointer;
         opacity: 0.7;

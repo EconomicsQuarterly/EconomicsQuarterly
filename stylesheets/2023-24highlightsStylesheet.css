@@ -10,7 +10,7 @@ body {
     font-weight: 600;
     padding: 40px 20px 40px 20px;
     display: inline-block;
-    
+
     a {
         transition: font-weight 300ms;
         margin-left: 25px;
@@ -34,7 +34,7 @@ body {
 }
 
 .pre-hero:hover img {
-    transform: rotate(180deg) ;
+    transform: rotate(180deg);
 }
 
 #hero {
@@ -118,10 +118,12 @@ body {
         margin-block-start: 2em;
         margin-block-end: 0;
     }
+
     p {
         margin-block-start: 0;
         margin-block-end: 0;
     }
+
     h6 {
         font-size: clamp(14pt, 2vw, 2vw);
         font-weight: normal;
@@ -132,15 +134,17 @@ body {
     h2 {
         font-size: 15vw;
         font-variant: small-caps;
-        font-weight: 1000;
+        font-weight: 200;
         text-transform: lowercase;
         text-align: center;
+        transition: font-weight 500ms;
     }
 }
 
 #thankyou {
     padding: 10vw;
     font-family: "DM Sans", sans-serif;
+
     h3 {
         font-size: 5vw;
     }
@@ -154,6 +158,7 @@ body {
 #archive {
     font-family: "DM Sans", sans-serif;
     padding: 3vw;
+
     #archive-title {
         font-size: 5vw;
         margin-block-start: 0;
@@ -167,6 +172,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     justify-items: center;
+
     .issue-box {
         padding: 2vw;
         min-width: 150px;
