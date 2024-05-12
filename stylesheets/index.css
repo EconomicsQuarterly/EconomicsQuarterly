@@ -132,10 +132,6 @@ body {
     margin: 0;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
 #colorTiles {
     display: flex;
     flex-wrap: wrap;

@@ -37,9 +37,11 @@ body {
 }
 
 .post {
-    padding: 11vw;
-    width: 100%;
+    padding: 5vw 5vw 9vw 5vw;
+    margin: 5vw 3vw;
+    width: 94vw;
     box-sizing: border-box;
+    border-bottom: 1px dashed;
 
     .separator {
         margin-top: 1em;

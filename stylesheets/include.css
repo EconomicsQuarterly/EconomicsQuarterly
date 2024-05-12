@@ -121,3 +121,7 @@
         opacity: .8;
     }
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
