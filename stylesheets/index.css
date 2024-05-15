@@ -283,25 +283,21 @@ body {
 
 #issue1 .articles div:hover {
     box-shadow: inset 0 -2px 0 0 var(--1-secondary);
-    cursor: pointer;
     font-weight: 600;
 }
 
 #issue2 .articles div:hover {
     box-shadow: inset 0 -2px 0 0 var(--2-secondary);
-    cursor: pointer;
     font-weight: 600;
 }
 
 #issue3 .articles div:hover {
     box-shadow: inset 0 -2px 0 0 var(--3-secondary);
-    cursor: pointer;
     font-weight: 600;
 }
 
 #issue4 .articles div:hover {
     box-shadow: inset 0 -2px 0 0 var(--4-secondary);
-    cursor: pointer;
     font-weight: 600;
 }
 
