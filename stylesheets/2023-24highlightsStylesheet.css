@@ -70,7 +70,7 @@ body {
         margin-block-end: 0;
     }
 
-    img {
+    .replaceLogo {
         float: right;
         right: 20px;
         top: 20px;

@@ -6,7 +6,7 @@
     <title>Economics Quarterly</title>
     <link rel="stylesheet" href="stylesheets/index.css">
     <link rel="stylesheet" href="stylesheets/include.css">
-    <link rel="icon" href="assets/globe.png">
+    <link rel="icon" href="assets/globe-white-thick.svg">
     <style>
         .event {
             opacity: 1;
@@ -57,6 +57,47 @@
             opacity: 0.7;
             cursor: pointer;
         }
+
+        .banner {
+            opacity: 1;
+            transition: opacity 300ms;
+            padding: 1vw 3vw;
+            border-bottom: 1px dashed;
+            display: block;
+            font-family: "DM Sans", sans-serif;
+
+            h1 {
+                font-size: 3em;
+            }
+
+            p {
+                font-size: 12pt;
+                line-height: 1.7;
+            }
+        }
+
+        .banner:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        #nav {
+            display: flex;
+
+            .centerpiece {
+                display: flex;
+                width: min-content;
+                max-height: 15vh;
+
+                img {
+                    display: inline;
+                }
+            }
+
+            .right {
+
+            }
+        }
     </style>
     <script src="scripts/analytics.js"></script>
 </head>
@@ -82,7 +123,6 @@
         <img src="assets/comp.png">
     </div>
 </div>
--->
 <div class="event" onclick="window.location.href = '2023-2024/newsletters.html'">
     <div class="event-left">
         <h1>Weekly Newsletter #1</h1>
@@ -91,6 +131,23 @@
             more...</a>
     </div>
 </div>
+-->
+<div class="banner" onclick="window.location.href = '2023-2024/newsletters.html'">
+    <p><strong>May 10th, 2024</strong>: Weekly Newsletter #1 out now! See our first weekly roundup of recent news. <a
+            href="2023-2024/newsletters.html" style="border-bottom: 1px solid; text-decoration: none; color: inherit;">Read
+        more...</a></p>
+</div>
+
+<!--<nav id="nav">-->
+<!--    <div class="centerpiece">-->
+<!--        <img class="nav-logo" src="assets/globe-transparent-thick.svg" alt=""/>-->
+<!--        <h1>Economics Quarterly</h1>-->
+<!--    </div>-->
+<!--    <div class="right">-->
+<!--        <a>Archives</a>-->
+<!--    </div>-->
+<!--</nav>-->
+
 <div id="hero">
     <div id="left">
         <h1>Economics Quarterly</h1>
@@ -98,7 +155,7 @@
             and the global economy. </p>
     </div>
     <div id="right">
-        <img class="logo replaceLogo" src="assets/logo.svg" alt=""/>
+        <object type="image/svg+xml" data="assets/logo.svg" class="logo replaceLogo"></object>
     </div>
 </div>
 <div id="issues">
@@ -125,7 +182,7 @@
 </div>
 <div class="subscribe">
     <div id="logo">
-        <img class="replaceLogo" src="assets/logo.svg" alt=""/>
+        <object type="image/svg+xml" data="assets/logo.svg" class="logo replaceLogo"></object>
     </div>
     <div id="text">
         <h2>Subscribe</h2>
@@ -233,5 +290,5 @@
 </div>
 
 </body>
-<script src="scripts/script.js"></script>
+<script defer src="scripts/script.js"></script>
 </html>

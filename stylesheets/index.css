@@ -146,12 +146,12 @@ body {
     min-width: 25%;
 }
 
-#colorTiles div:nth-child(1), #colorTiles div:nth-child(2), #colorTiles div:nth-child(3) {
+#colorTiles div:nth-child(1), #colorTiles div:nth-child(2), #colorTiles div:nth-child(3), #colorTiles div:nth-child(4) {
     font-weight: 300;
     transition: font-weight 300ms, opacity 300ms, flex 800ms;
 }
 
-#colorTiles div:nth-child(1):hover, #colorTiles div:nth-child(2):hover, #colorTiles div:nth-child(3):hover {
+#colorTiles div:nth-child(1):hover, #colorTiles div:nth-child(2):hover, #colorTiles div:nth-child(3):hover, #colorTiles div:nth-child(4):hover {
     font-weight: 1000;
     opacity: 0.8;
     flex: 1.5;
@@ -249,9 +249,9 @@ body {
     position: sticky;
     z-index: 1;
     top: 30px;
-    font-size: 30vw;
+    font-size: 20vw;
     opacity: 0.1;
-    padding: 2vw;
+    padding: 5vw;
 }
 
 .issue > div {
@@ -268,7 +268,7 @@ body {
 }
 
 .issue .contents-heading {
-    font-size: clamp(30pt, 10vw, 80pt);
+    font-size: clamp(24pt, 7vw, 53pt);
 }
 
 .issue .articles {
@@ -277,7 +277,7 @@ body {
 
 .issue .articles div {
     margin: 50px 0;
-    font-size: clamp(20pt, 5vw, 45pt);
+    font-size: clamp(18pt, 4vw, 45pt);
     transition: box-shadow 300ms, font-weight 500ms;
 }
 

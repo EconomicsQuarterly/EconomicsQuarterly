@@ -41,22 +41,22 @@ function enter(response) {
     case 15:
       document.body.style["color"] = "var(--black)";
       document.body.style["background-color"] = "var(--white)";
-      document.querySelectorAll(".replaceLogo")[0].src = "../assets/logo.svg";
+      document.querySelectorAll(".replaceLogo")[0].contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue("--black");
       break;
     case 3:
       document.body.style["color"] = "var(--1-primary)";
       document.body.style["background-color"] = "var(--1-secondary)";
-      document.querySelectorAll(".replaceLogo")[0].src = "../assets/logo-i1.svg";
+      document.querySelectorAll(".replaceLogo")[0].contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue("--1-primary");
       break;
     case 4:
       document.body.style["color"] = "var(--2-primary)";
       document.body.style["background-color"] = "var(--2-secondary)";
-      document.querySelectorAll(".replaceLogo")[0].src = "../assets/logo-i2.svg";
+      document.querySelectorAll(".replaceLogo")[0].contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue("--2-primary");
       break;
     case 5:
       document.body.style["color"] = "var(--3-primary)";
       document.body.style["background-color"] = "var(--3-secondary)";
-      document.querySelectorAll(".replaceLogo")[0].src = "../assets/logo-i3.svg";
+      document.querySelectorAll(".replaceLogo")[0].contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue("--3-primary");
       break;
     case 6:
     case 7:
@@ -67,13 +67,13 @@ function enter(response) {
     case 12:
       document.body.style["color"] = "var(--3-primary)";
       document.body.style["background-color"] = "var(--3-secondary)";
-      document.querySelectorAll(".replaceLogo")[0].src = "../assets/logo-i3.svg";
+      document.querySelectorAll(".replaceLogo")[0].contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue("--3-primary");
       response.element.style["font-weight"] = "1000";
       break;
     case 13:
       document.body.style["color"] = "var(--4-primary)";
       document.body.style["background-color"] = "var(--4-secondary)";
-      document.querySelectorAll(".replaceLogo")[0].src = "../assets/logo-i4.svg";
+      document.querySelectorAll(".replaceLogo")[0].contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue("--4-primary");
       break;
 
   }
