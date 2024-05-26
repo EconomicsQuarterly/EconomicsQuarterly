@@ -57,108 +57,11 @@
             opacity: 0.7;
             cursor: pointer;
         }
-
-        .banner {
-            opacity: 1;
-            background-color: var(--2-complement);
-            color: var(--2-primary);
-            transition: opacity 300ms, background-color 300ms, color 300ms;
-            padding: 1vw 3vw;
-            border-bottom: 1px dashed;
-            display: block;
-            font-family: "DM Sans", sans-serif;
-
-            h1 {
-                font-size: 3em;
-            }
-
-            p {
-                font-size: 12pt;
-                line-height: 1.7;
-                margin-block-start: 0;
-                margin-block-end: 0;
-            }
-        }
-
-        .banner:hover {
-            opacity: 0.8;
-            cursor: pointer;
-        }
-
-        #nav {
-            display: flex;
-            flex-direction: column;
-            position: sticky;
-            z-index: 3000;
-            top: 0;
-            background-color: inherit;
-            color: inherit;
-            max-width: 100%;
-
-            justify-content: center;
-            transition: top 500ms, background-color 300ms, color 300ms;
-
-            .centerpiece {
-                @media only screen and (max-width: 530px) {
-                    display: none;
-                }
-                @media only screen and (min-width: 530px) {
-                    display: flex;
-                }
-                justify-content: center;
-                width: 100%;
-                height: clamp(80px, 6vw, 150px);
-                align-items: center;
-                padding: 1vh;
-
-                .nav-logo {
-                    display: inline;
-                    height: clamp(30px, 100%, 60px);
-                    margin-right: 0;
-                }
-
-                h1 {
-                    margin-block-start: 0;
-                    margin-block-end: 0;
-                    vertical-align: middle;
-                    padding: 3vw;
-                    font-family: "PT Serif", georgia, serif;
-                    font-size: clamp(18pt, 3.5vw, 22pt);
-                    font-weight: 600;
-                }
-
-                a {
-                    font-family: "DM Sans", sans-serif;
-                    border-bottom: 1px solid;
-                    margin-left: auto;
-                    right: 3vw;
-                    font-size: clamp(12pt, 2vw, 16pt);
-                    position: absolute;
-                    font-weight: 600;
-                    transition: font-weight 300ms;
-                    text-decoration: none;
-                    color: inherit;
-                }
-
-                a:hover {
-                    font-weight: 200;
-                    cursor: pointer;
-                }
-            }
-        }
     </style>
     <script src="scripts/analytics.js"></script>
 </head>
 <body>
 <!--
-<div class="event" onclick="window.location.href = '2023-2024/recruit.html'">
-    <div class="event-left">
-        <h1>We’re recruiting!</h1>
-        <p></p>
-        <a href="2023-2024/recruit.html" style="border-bottom: 1px solid; text-decoration: none; color: inherit;">Read
-            more...</a>
-    </div>
-</div>
 <div class="event" onclick="window.location.href = '2023-2024/investor-challenge.html'">
     <div class="event-left">
         <h1>Investor Challenge</h1>
@@ -169,14 +72,6 @@
     </div>
     <div class="event-right">
         <img src="assets/comp.png">
-    </div>
-</div>
-<div class="event" onclick="window.location.href = '2023-2024/newsletters.html'">
-    <div class="event-left">
-        <h1>Weekly Newsletter #1</h1>
-        <p>Out now! See our first weekly roundup of recent news.</p>
-        <a href="2023-2024/newsletters.html" style="border-bottom: 1px solid; text-decoration: none; color: inherit;">Read
-            more...</a>
     </div>
 </div>
 -->
