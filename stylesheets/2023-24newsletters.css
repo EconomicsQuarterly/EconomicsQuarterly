@@ -36,6 +36,46 @@ body {
     transform: rotate(180deg);
 }
 
+.post:nth-child(4n) {
+    .separator, .border {
+        background-color: var(--1-primary);
+    }
+
+    a {
+        color: var(--1-primary);
+    }
+}
+
+.post:nth-child(4n + 1) {
+    .separator, .border {
+        background-color: var(--2-primary);
+    }
+
+    a {
+        color: var(--2-primary);
+    }
+}
+
+.post:nth-child(4n + 2) {
+    .separator, .border {
+        background-color: var(--3-primary);
+    }
+
+    a {
+        color: var(--3-primary);
+    }
+}
+
+.post:nth-child(4n + 3) {
+    .separator, .border {
+        background-color: var(--4-primary);
+    }
+
+    a {
+        color: var(--4-primary);
+    }
+}
+
 .post {
     padding: 5vw 5vw 9vw 5vw;
     margin: 5vw 3vw;
@@ -48,7 +88,6 @@ body {
         margin-bottom: 1em;
         height: 10px;
         width: 100%;
-        background-color: var(--2-primary);
     }
 
     .border {
@@ -56,7 +95,6 @@ body {
         margin-bottom: 1em;
         height: 3px;
         width: 100%;
-        background-color: var(--2-primary);
     }
 
     .newsletter-header {
@@ -179,7 +217,6 @@ body {
 }
 
 a {
-    color: var(--2-primary);
     transition: opacity 300ms;
     word-wrap: break-word;
 }
