@@ -14,8 +14,8 @@
 
     .banner {
         opacity: 1;
-        background-color: var(--2-complement);
-        color: var(--2-primary);
+        background-color: var(--3-complement);
+        color: var(--3-primary);
         transition: opacity 300ms, background-color 300ms, color 300ms;
         padding: 1vw 3vw;
         border-bottom: 1px dashed;
