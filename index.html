@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Economics Quarterly</title>
-    <link rel="stylesheet" href="stylesheets/index.css">
-    <link rel="stylesheet" href="stylesheets/include.css">
+    <link rel="stylesheet" href="2023-2024/stylesheets/2023-24index.css">
+    <link rel="stylesheet" href="global-stylesheets/include.css">
     <link rel="icon" href="assets/globe-white-thick.svg">
     <style>
         .event {
@@ -58,7 +58,7 @@
             cursor: pointer;
         }
     </style>
-    <script src="scripts/analytics.js"></script>
+    <script src="global-scripts/analytics.js"></script>
 </head>
 <body>
 <!--
@@ -78,12 +78,13 @@
 
 
 <nav id="nav">
-    <div class="banner" onclick="window.location.href = '2023-2024/newsletters.html'">
-        <p><strong>June 2024</strong>: Issue III out soon!
-            <!--
-            <a href="2023-2024/newsletters.html"
-               style="border-bottom: 1px solid; text-decoration: none; color: inherit;">See more...</a></p>
-           -->
+    <div class="banner" onclick="document.getElementById('issue3').scrollIntoView({behavior: 'smooth'});">
+        <p><strong>June 10th, 2024</strong>: Issue III out now!
+            <a style="border-bottom: 1px solid; text-decoration: none; color: inherit;">See more...</a></p>
+    </div>
+    <div class="banner" onclick="window.open('2023-2024/investor-challenge-results.html', '_self');">
+        <p><strong>June 10th, 2024</strong>: Investor Challenge Results out!
+            <a style="border-bottom: 1px solid; text-decoration: none; color: inherit;">See more...</a></p>
     </div>
     <div class="centerpiece">
         <object type="image/svg+xml" data="assets/globe-transparent-thick.svg" class="nav-logo replaceLogo"></object>
@@ -112,13 +113,11 @@
         <a id="i2">ISSUE II</a>
         <img src="assets/icon-arrow.svg" alt="arrow">
     </div>
-    <!-- todo: temp
-    <br />
+    <br/>
     <div class="link" onclick="document.getElementById('issue3').scrollIntoView({behavior: 'smooth'});">
         <a id="i3">ISSUE III</a>
         <img src="assets/icon-arrow.svg" alt="arrow">
     </div>
-    -->
     <br/>
     <div id="archive-link" onclick="document.location.href = 'archive.html'">
         <a>See archive and posts →</a>
@@ -138,11 +137,8 @@
 <div id="colorTiles">
     <div onclick="document.getElementById('issue1').scrollIntoView({behavior: 'smooth'});">Issue I</div>
     <div onclick="document.getElementById('issue2').scrollIntoView({behavior: 'smooth'});">Issue II</div>
-    <!--todo: temp
     <div onclick="document.getElementById('issue3').scrollIntoView({behavior: 'smooth'});">Issue III</div>
-    <div>Issue IV (coming soon)</div>
-    -->
-    <div>Issue III (coming soon)</div>
+    <!--    <div>Issue IV (coming soon)</div>-->
 </div>
 
 <div class="issue" id="issue1">
@@ -203,7 +199,6 @@
     </div>
 </div>
 
-<!-- todo: temp
 <div class="issue" id="issue3">
     <h1>Issue III</h1>
     <div>
@@ -213,7 +208,14 @@
                 <h2>Contents</h2>
             </div>
             <div class="articles">
-                <div></div>
+                <div>Hong Kong Economic Outlook 2024/2025</div>
+                <div>Exchange Square Interviews</div>
+                <div>Solar History in China</div>
+                <div>Recommended Holding</div>
+                <div>Investing Concepts 3: Active Investing Strategies</div>
+                <div>The Terra Luna Catastrophe</div>
+                <div>Quantum Economics: Probability from Envariance</div>
+                <div>The Effects of Social Capitalism on Economy</div>
             </div>
         </div>
         <div class="contributors">
@@ -221,12 +223,30 @@
                 <h2>Contributors</h2>
             </div>
             <div class="contributor-text">
-                <p>Written by Colin Ngan, Tim He, Sebastian Zhu, Howard Deng, Konnor Wan; Layout by Justin Chen</p>
+                <p>Articles: Tim He, Colin Ngan, Sebastian Zhu, Howard Deng, Konnor Wan, Isabella Sun, Amelia Xu;</p>
+                <p>Layout: Justin Chen, Katy Su;</p>
+                <p>Marketing: Micky Lyu, Zoe Wai, Irene Chen, Marcela Chen;</p>
+                <p>Administration: Tim He, Colin Ngan, Sebastian Zhu, Howard Deng, Konnor Wan, Justin Chen, Elly
+                    Gao;</p>
             </div>
         </div>
     </div>
 </div>
--->
+
+<div id="team">
+    <div class="team-heading">
+        <h2>Our Team (2023-2024)</h2>
+    </div>
+    <div class="team-text">
+        <p>Articles: Tim He, Colin Ngan, Sebastian Zhu, Howard Deng, Konnor Wan, Natalie Yue, Isabella Sun,
+            Derica Suria, Amelia Xu, Nicholas Tanner, Monique Siu;</p>
+        <p>Layout: Justin Chen, Katy Su; </p>
+        <p>Marketing: Micky Lyu, Zoe Wai, Irene Chen, Marcela Chen;</p>
+        <p>Administration: Tim He, Colin Ngan, Sebastian Zhu, Howard Deng, Konnor Wan, Justin Chen, Elly Gao,
+            Bruce Chan;</p>
+        <p>Interview / Editing: Lucas Yui, Daisy Chen;</p>
+    </div>
+</div>
 
 <div id="footer">
     <p>Have any inquiries? Feel free to email us at <a href="mailto:economicsquarterly@gmail.com">economicsquarterly@gmail.com</a>.
@@ -234,5 +254,5 @@
 </div>
 
 </body>
-<script defer src="scripts/script.js"></script>
+<script defer src="2023-2024/scripts/2023-24indexScript.js"></script>
 </html>

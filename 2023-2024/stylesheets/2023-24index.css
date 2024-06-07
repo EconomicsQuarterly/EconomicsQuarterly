@@ -14,8 +14,6 @@
 
     .banner {
         opacity: 1;
-        background-color: var(--3-complement);
-        color: var(--3-primary);
         transition: opacity 300ms, background-color 300ms, color 300ms;
         padding: 1vw 3vw;
         border-bottom: 1px dashed;
@@ -32,6 +30,16 @@
             margin-block-start: 0;
             margin-block-end: 0;
         }
+    }
+
+    .banner:nth-child(odd) {
+        background-color: var(--3-complement);
+        color: var(--3-primary);
+    }
+
+    .banner:nth-child(even) {
+        background-color: var(--3-primary);
+        color: var(--3-complement);
     }
 
     .banner:hover {
@@ -403,6 +411,11 @@ body {
 
 .issue .contributors {
     margin: 20vh 0 40vh 0;
+}
+
+#team {
+    padding: 40px 40px 10px 40px;
+    font-family: "DM Sans", sans-serif;
 }
 
 #footer {
