@@ -84,6 +84,51 @@ body {
             left: calc(5vw + clamp(10px, 1vw, 60px));
             border-right: 1px dashed;
         }
+
+        .blue {
+            color: #274472;
+            font-weight: bold;
+        }
+
+        .green {
+            color: #2d590c;
+            font-weight: bold;
+        }
+
+        .red {
+            color: #722410;
+            font-weight: bold;
+        }
+
+        .purple {
+            color: #69418b;
+            font-weight: bold;
+        }
+
+        .yellow {
+            color: #866225;
+            font-weight: bold;
+        }
+
+        #leaderboard .blue {
+            background-color: #d7e7ed;
+        }
+
+        #leaderboard .green {
+            background-color: #c7e4b1;
+        }
+
+        #leaderboard .red {
+            background-color: #f4b6b0;
+        }
+
+        #leaderboard .yellow {
+            background-color: #faf7c6;
+        }
+
+        #leaderboard .purple {
+            background-color: #f0d1ff;
+        }
     }
 
     #event-right {
