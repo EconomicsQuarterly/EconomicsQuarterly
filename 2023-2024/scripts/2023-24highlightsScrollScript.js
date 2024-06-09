@@ -1,6 +1,4 @@
 const scroller = scrollama();
-// let enterFunctions = [[textFocus, enter], [textFocus, enter], [textFocus, enter], [textFocus, enter], [textFocus, enter], [textFocus, enter], [textFocus, enter], [textFocus, enter], [textFocus, enter], [textFocus, enter], [textFocus, enter], [textFocus, enter], [textFocus, enter], [textFocus, enter]];
-// let exitFunctions = [[exit], [exit], [exit], [exit], [exit], [exit], [exit], [exit], [exit], [exit], [exit], [exit], [exit], [exit]];
 
 window.onbeforeunload = () => window.scrollTo(0, 0);
 
@@ -75,6 +73,5 @@ function enter(response) {
       document.body.style["background-color"] = "var(--4-secondary)";
       document.querySelectorAll(".replaceLogo")[0].contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue("--4-primary");
       break;
-
   }
 }

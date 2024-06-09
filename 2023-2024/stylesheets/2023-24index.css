@@ -56,13 +56,13 @@
         }
         justify-content: center;
         max-width: 100%;
-        height: clamp(80px, 6vw, 150px);
+        height: clamp(40px, 3vw, 75px);
         align-items: center;
         padding: 1vh;
 
         .nav-logo {
             display: inline;
-            height: clamp(30px, 100%, 60px);
+            height: clamp(20px, 100%, 40px);
             margin-right: 0;
         }
 
@@ -72,7 +72,7 @@
             vertical-align: middle;
             padding: 3vw;
             font-family: "PT Serif", georgia, serif;
-            font-size: clamp(18pt, 3.5vw, 22pt);
+            font-size: clamp(14pt, 2vw, 18pt);
             font-weight: 600;
         }
 
@@ -81,7 +81,7 @@
             border-bottom: 1px solid;
             margin-left: auto;
             right: 3vw;
-            font-size: clamp(12pt, 2vw, 16pt);
+            font-size: clamp(10pt, 1.5vw, 15pt);
             position: absolute;
             font-weight: 600;
             transition: font-weight 300ms;
@@ -366,7 +366,7 @@ body {
 }
 
 .issue .contents-heading {
-    font-size: clamp(24pt, 7vw, 53pt);
+    font-size: clamp(17pt, 5vw, 38pt);
 }
 
 .issue .articles {
@@ -375,7 +375,7 @@ body {
 
 .issue .articles div {
     margin: 50px 0;
-    font-size: clamp(18pt, 4vw, 45pt);
+    font-size: clamp(13pt, 3vw, 34pt);
     transition: box-shadow 300ms, font-weight 500ms;
 }
 

@@ -59,13 +59,13 @@ body {
     }
 
     h1, h2 {
-        font-size: 18vw;
+        font-size: 12vw;
         margin-block-start: 0;
         margin-block-end: 0;
     }
 
     h3 {
-        font-size: 12vw;
+        font-size: 8vw;
         margin-block-start: 0;
         margin-block-end: 0;
     }
@@ -90,11 +90,11 @@ body {
     font-family: "DM Sans", sans-serif;
 
     h2, h3 {
-        font-size: 7vw;
+        font-size: 5vw;
     }
 
     p {
-        font-size: clamp(14pt, 4vw, 4vw);
+        font-size: clamp(14pt, 3vw, 24vw);
         line-height: 1.7;
     }
 
