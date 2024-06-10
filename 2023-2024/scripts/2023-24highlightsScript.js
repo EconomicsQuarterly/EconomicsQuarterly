@@ -26,8 +26,8 @@ const nodes = data.map(Object.create);
 const simulation = d3.forceSimulation(nodes)
   .alphaTarget(0.3)
   .velocityDecay(0.1)
-  .force("x", d3.forceX(0).strength(0.004))
-  .force("y", d3.forceY(0).strength(0.004))
+  .force("x", d3.forceX(0).strength(0.01))
+  .force("y", d3.forceY(0).strength(0.01))
   .force("collide", d3.forceCollide().radius(d => d.r + 8).iterations(3))
   .force("charge", d3.forceManyBody().strength((d, i) => i ? 0 : -width * 2 / 7))
   .on("tick", ticked);
