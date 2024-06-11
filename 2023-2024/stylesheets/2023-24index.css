@@ -382,21 +382,25 @@ body {
 #issue1 .articles div:hover {
     box-shadow: inset 0 -2px 0 0 var(--1-secondary);
     font-weight: 600;
+    cursor: pointer;
 }
 
 #issue2 .articles div:hover {
     box-shadow: inset 0 -2px 0 0 var(--2-secondary);
     font-weight: 600;
+    cursor: pointer;
 }
 
 #issue3 .articles div:hover {
     box-shadow: inset 0 -2px 0 0 var(--3-secondary);
     font-weight: 600;
+    cursor: pointer;
 }
 
 #issue4 .articles div:hover {
     box-shadow: inset 0 -2px 0 0 var(--4-secondary);
     font-weight: 600;
+    cursor: pointer;
 }
 
 .issue .contributors h2 {
