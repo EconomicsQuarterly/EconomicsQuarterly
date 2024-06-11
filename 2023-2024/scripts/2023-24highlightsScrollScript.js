@@ -1,7 +1,5 @@
 const scroller = scrollama();
-
 window.onbeforeunload = () => window.scrollTo(0, 0);
-
 
 scroller
   .setup({
@@ -35,8 +33,10 @@ function enter(response) {
     case 0:
     case 1:
     case 2:
+    case 13:
     case 14:
-    case 15:
+    case 16:
+    case 17:
       document.body.style["color"] = "var(--black)";
       document.body.style["background-color"] = "var(--white)";
       document.querySelectorAll(".replaceLogo")[0].contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue("--black");
@@ -68,7 +68,7 @@ function enter(response) {
       document.querySelectorAll(".replaceLogo")[0].contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue("--3-primary");
       response.element.style["font-weight"] = "1000";
       break;
-    case 13:
+    case 15:
       document.body.style["color"] = "var(--4-primary)";
       document.body.style["background-color"] = "var(--4-secondary)";
       document.querySelectorAll(".replaceLogo")[0].contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue("--4-primary");
