@@ -15,7 +15,7 @@ function setup() {
 
   let result = [];
   let k = width / 200;
-  for (let i = 0; i < 207; i++) {
+  for (let i = 0; i < 270; i++) {
     result.push({r: k, group: Math.floor(Math.random() * 4)});
   }
   return result;
