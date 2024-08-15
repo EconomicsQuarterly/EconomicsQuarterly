@@ -216,6 +216,8 @@ body {
   }
 
   a {
+    display: inline-block;
+    margin-bottom: 15px;
     text-decoration: none;
     opacity: 1;
     transition: opacity 300ms;
