@@ -113,3 +113,52 @@ function closePopup() {
     document.querySelector("#issue-popup").classList.toggle("active");
   }, 300);
 }
+
+for (let i = 0; i < document.querySelectorAll("#colorTiles div").length; i++) {
+  document.querySelectorAll("#colorTiles div")[i].addEventListener("mouseover", function () {
+    colorIssue(i + 1);
+  })
+}
+
+document.querySelector("#colorTiles").addEventListener("mouseleave", function () {
+  setTimeout(function () {
+    if (!document.querySelector('#colorTiles').matches(":hover")) {
+
+      colorIssue(0);
+    }
+  }, 4000);
+})
+
+function colorIssue(t) {
+  document.body.style["background-color"] = `var(--${t}-secondary)`;
+  document.body.style["color"] = `var(--${t}-primary)`;
+
+  for (let i = 0; i < document.querySelectorAll(".replaceLogo").length; i++) {
+    document.querySelectorAll(".replaceLogo")[i].contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue(`--${t}-primary`);
+  }
+
+  for (let i = 0; i < document.querySelectorAll(".banner").length; i++) {
+    if (i % 2 === 0 && t !== 0) {
+      document.querySelectorAll(".banner")[i].style["background-color"] = `var(--${t}-complement)`;
+      document.querySelectorAll(".banner")[i].style["color"] = `var(--${t}-primary)`;
+    } else {
+      document.querySelectorAll(".banner")[i].style["background-color"] = `var(--${4}-complement)`;
+      document.querySelectorAll(".banner")[i].style["color"] = `var(--${4}-primary)`;
+    }
+  }
+
+  if (t !== 0) {
+    document.querySelector("#nav").style["background-color"] = `var(--${t}-primary)`;
+    document.querySelector("#nav").style["color"] = `var(--${t}-secondary)`;
+    document.querySelector("#nav .replaceLogo").contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue(`--${t}-secondary`);
+  } else {
+    document.querySelector("#nav").style["background-color"] = `var(--${t}-secondary)`;
+    document.querySelector("#nav").style["color"] = `var(--${t}-primary)`;
+    document.querySelector("#nav .replaceLogo").contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue(`--${t}-primary`);
+  }
+
+  document.querySelector(".subscribe button").style["background-color"] = `var(--${t}-primary)`;
+  document.querySelector(".subscribe button").style["color"] = `var(--${t}-secondary)`;
+
+  document.querySelector("#footer").style["color"] = `var(--${t}-primary)`;
+}

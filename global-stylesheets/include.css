@@ -36,10 +36,14 @@
 :root {
   --color: var(--1-secondary);
   --background-color: var(--1-primary);
+
   --white: rgb(250, 250, 250);
   --black: rgb(10, 10, 10);
   --grey: rgb(98, 98, 98);
   --light-light-grey: rgb(239, 239, 239);
+
+  --0-primary: var(--black);
+  --0-secondary: var(--white);
   --1-primary: #255957;
   --1-secondary: #cbf1ce;
   --1-complement: #E6DC8C;

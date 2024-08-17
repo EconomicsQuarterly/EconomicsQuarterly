@@ -10,11 +10,11 @@
   box-sizing: border-box;
 
   justify-content: center;
-  transition: top 500ms, background-color 300ms, color 300ms;
+  transition: top 500ms, background-color 600ms, color 600ms;
 
   .banner {
     opacity: 1;
-    transition: opacity 300ms, background-color 300ms, color 300ms;
+    transition: opacity 600ms, background-color 600ms, color 600ms;
     padding: 1vw 3vw;
     border-bottom: 1px dashed;
     display: block;
@@ -84,7 +84,7 @@
       font-size: clamp(10pt, 1.5vw, 15pt);
       position: absolute;
       font-weight: 600;
-      transition: font-weight 300ms;
+      transition: font-weight 600ms;
       text-decoration: none;
       color: inherit;
     }
@@ -99,7 +99,7 @@
 #hero {
   display: flex;
   justify-content: space-evenly;
-  padding: 30px;
+  padding: 30px 30px 80px 30px;
   box-sizing: border-box;
 
   @media only screen and (max-width: 530px) {
@@ -160,14 +160,14 @@
     height: 100%;
     padding: 0 10px 0 0;
     line-height: 1.5;
-    transition: opacity 300ms, font-weight 300ms;
+    transition: opacity 600ms, font-weight 600ms;
     font-variant: small-caps;
     font-family: "DM Sans", sans-serif;
     font-weight: 1000;
   }
 
   .link img {
-    transition: opacity 300ms, transform 300ms;
+    transition: opacity 600ms, transform 600ms;
   }
 
   .link:hover {
@@ -204,7 +204,7 @@
   padding: 0 10px 0 0;
   line-height: 1.5;
   opacity: 1;
-  transition: opacity 300ms, font-weight 300ms, border-bottom 300ms;
+  transition: opacity 600ms, font-weight 600ms, border-bottom 600ms;
   font-family: "DM Sans", sans-serif;
   font-weight: 500;
 }
@@ -217,7 +217,7 @@
 }
 
 body {
-  transition: background-color 300ms;
+  transition: background-color 600ms;
   background-color: var(--white);
   color: var(--black);
   margin: 0;
@@ -236,14 +236,11 @@ body {
   padding: 20px;
   flex: 1;
   min-width: 25%;
-}
-
-#colorTiles div:nth-child(1), #colorTiles div:nth-child(2), #colorTiles div:nth-child(3), #colorTiles div:nth-child(4) {
   font-weight: 300;
-  transition: font-weight 300ms, opacity 300ms, flex 800ms;
+  transition: font-weight 600ms, opacity 600ms, flex 600ms;
 }
 
-#colorTiles div:nth-child(1):hover, #colorTiles div:nth-child(2):hover, #colorTiles div:nth-child(3):hover, #colorTiles div:nth-child(4):hover {
+#colorTiles div:hover {
   font-weight: 1000;
   opacity: 0.8;
   flex: 1.5;
@@ -276,11 +273,11 @@ body {
 }
 
 #footer {
-  padding: 40px;
+  padding: 20px 40px;
   font-family: "DM Sans", sans-serif;
 
   a {
-    transition: opacity 300ms;
+    transition: opacity 600ms;
     color: inherit;
   }
 
@@ -295,7 +292,7 @@ body {
 
 #issue-popup {
   box-sizing: border-box;
-  transition: opacity 300ms ease;
+  transition: opacity 600ms ease;
   opacity: 0;
   height: 0;
   width: 0;
@@ -306,7 +303,7 @@ body {
 
 #issue-popup.active {
   overflow: scroll;
-  transition: opacity 300ms ease;
+  transition: opacity 600ms ease;
   opacity: 1;
   height: 100vh;
   width: 100vw;
@@ -329,7 +326,7 @@ body {
   }
 
   #read-button {
-    transition: opacity 300ms, background-color 300ms;
+    transition: opacity 600ms, background-color 600ms;
     border: none;
     border-radius: 5px;
     font-family: "DM Sans", sans-serif;
@@ -359,7 +356,7 @@ body {
       div {
         margin: 30px 0;
         font-size: clamp(13pt, 3vw, 20pt);
-        transition: box-shadow 300ms, font-weight 500ms;
+        transition: box-shadow 600ms, font-weight 500ms;
       }
 
       div:hover {
@@ -390,7 +387,7 @@ body {
     border-radius: 50%;
     filter: none;
     opacity: 1;
-    transition: opacity 300ms;
+    transition: opacity 600ms;
 
     object {
       background-color: var(--background-color);
