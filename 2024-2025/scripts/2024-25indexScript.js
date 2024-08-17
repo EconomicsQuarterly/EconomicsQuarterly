@@ -129,26 +129,18 @@ function colorIssue(t) {
   }
 
   for (let i = 0; i < document.querySelectorAll(".banner").length; i++) {
-    if (i % 2 === 0 && t !== 0) {
+    if (i % 2 === 0) {
       document.querySelectorAll(".banner")[i].style["background-color"] = `var(--${t}-complement)`;
       document.querySelectorAll(".banner")[i].style["color"] = `var(--${t}-primary)`;
+    } else {
+      document.querySelectorAll(".banner")[i].style["background-color"] = `var(--${t}-primary)`;
+      document.querySelectorAll(".banner")[i].style["color"] = `var(--${t}-complement)`;
     }
-    // else {
-    //   document.querySelectorAll(".banner")[i].style["background-color"] = `var(--${4}-complement)`;
-    //   document.querySelectorAll(".banner")[i].style["color"] = `var(--${4}-primary)`;
-    // }
   }
 
-  if (t !== 0) {
-    document.querySelector("#nav").style["background-color"] = `var(--${t}-primary)`;
-    document.querySelector("#nav").style["color"] = `var(--${t}-secondary)`;
-    document.querySelector("#nav .replaceLogo").contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue(`--${t}-secondary`);
-  }
-  // else {
-  //   document.querySelector("#nav").style["background-color"] = `var(--${t}-secondary)`;
-  //   document.querySelector("#nav").style["color"] = `var(--${t}-primary)`;
-  //   document.querySelector("#nav .replaceLogo").contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue(`--${t}-primary`);
-  // }
+  document.querySelector("#nav").style["background-color"] = `var(--${t}-primary)`;
+  document.querySelector("#nav").style["color"] = `var(--${t}-secondary)`;
+  document.querySelector("#nav .replaceLogo").contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue(`--${t}-secondary`);
 
   document.querySelector(".subscribe button").style["background-color"] = `var(--${t}-primary)`;
   document.querySelector(".subscribe button").style["color"] = `var(--${t}-secondary)`;
