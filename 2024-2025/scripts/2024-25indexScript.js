@@ -123,6 +123,8 @@ for (let i = 0; i < document.querySelectorAll("#colorTiles div").length; i++) {
 function colorIssue(t) {
   document.body.style["background-color"] = `var(--${t}-secondary)`;
   document.body.style["color"] = `var(--${t}-primary)`;
+  document.querySelector(':root').style.setProperty('--color', `var(--${t}-primary)`);
+  document.querySelector(':root').style.setProperty('--background-color', `var(--${t}-secondary)`);
 
   for (let i = 0; i < document.querySelectorAll(".replaceLogo").length; i++) {
     document.querySelectorAll(".replaceLogo")[i].contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue(`--${t}-primary`);
@@ -146,4 +148,33 @@ function colorIssue(t) {
   document.querySelector(".subscribe button").style["color"] = `var(--${t}-secondary)`;
 
   document.querySelector("#footer").style["color"] = `var(--${t}-primary)`;
+}
+
+
+window.onload = () => {
+  let o = document.querySelectorAll(".instagram");
+  for (let i = 0; i < o.length; i++) {
+    o[i].querySelector("object").contentDocument.getElementById("instagram-icon").style.color = "white";
+
+    o[i].onmouseover = (e) => {
+      e.target.querySelector("object").contentDocument.getElementById("instagram-icon").style.color = getComputedStyle(document.body).getPropertyValue(`--color`);
+    }
+
+    o[i].onmouseleave = (e) => {
+      e.target.querySelector("object").contentDocument.getElementById("instagram-icon").style.color = "white";
+    }
+  }
+
+  o = document.querySelectorAll(".youtube");
+  for (let i = 0; i < o.length; i++) {
+    o[i].querySelector("object").contentDocument.getElementById("youtube-icon").style.color = "white";
+
+    o[i].onmouseover = (e) => {
+      e.target.querySelector("object").contentDocument.getElementById("youtube-icon").style.color = getComputedStyle(document.body).getPropertyValue(`--color`);
+    }
+
+    o[i].onmouseleave = (e) => {
+      e.target.querySelector("object").contentDocument.getElementById("youtube-icon").style.color = "white";
+    }
+  }
 }

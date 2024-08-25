@@ -273,7 +273,9 @@ body {
 }
 
 #footer {
-  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
   font-family: "DM Sans", sans-serif;
 
   a {
@@ -400,6 +402,72 @@ body {
 
   #close-button-wrapper:hover {
     opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+.social-media-tray {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    margin: 0 5px;
+  }
+
+  .instagram {
+    border-radius: 4px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-image: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
+    radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+    linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+
+    object {
+      width: 16px;
+      height: 16px;
+      pointer-events: none;
+    }
+  }
+
+  .instagram:hover {
+    background-image: radial-gradient(circle farthest-corner at 35% 90%, var(--background-color), transparent 50%),
+    radial-gradient(circle farthest-corner at 0 140%, var(--background-color), transparent 50%),
+    radial-gradient(ellipse farthest-corner at 0 -25%, var(--background-color), transparent 50%),
+    radial-gradient(ellipse farthest-corner at 20% -50%, var(--background-color), transparent 50%),
+    radial-gradient(ellipse farthest-corner at 100% 0, var(--background-color), transparent 50%),
+    radial-gradient(ellipse farthest-corner at 60% -20%, var(--background-color), transparent 50%),
+    radial-gradient(ellipse farthest-corner at 100% 100%, var(--background-color), transparent),
+    linear-gradient(var(--background-color), var(--background-color) 30%, var(--background-color) 50%, var(--background-color) 70%, var(--background-color) 100%);
+    cursor: pointer;
+  }
+
+  .youtube {
+    border-radius: 4px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-color: #ee3130;
+
+    object {
+      width: 16px;
+      height: 16px;
+      pointer-events: none;
+    }
+  }
+
+  .youtube:hover {
+    background-color: var(--background-color);
     cursor: pointer;
   }
 }

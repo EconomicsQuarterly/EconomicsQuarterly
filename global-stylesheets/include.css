@@ -34,8 +34,8 @@
 }
 
 :root {
-  --color: var(--1-secondary);
-  --background-color: var(--1-primary);
+  --color: var(--black);
+  --background-color: var(--white);
 
   --white: rgb(250, 250, 250);
   --black: rgb(10, 10, 10);
