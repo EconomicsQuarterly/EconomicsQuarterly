@@ -470,4 +470,26 @@ body {
     background-color: var(--background-color);
     cursor: pointer;
   }
+
+  .email {
+    border-radius: 4px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-color: var(--dark-dark-grey);
+    fill: var(--white);
+
+    object {
+      width: 16px;
+      height: 16px;
+      pointer-events: none;
+    }
+  }
+
+  .email:hover {
+    background-color: var(--background-color);
+    cursor: pointer;
+  }
 }

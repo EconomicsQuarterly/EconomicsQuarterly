@@ -4,7 +4,7 @@ window.onscroll = function () {
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("nav").style.top = "0";
   } else {
-    document.getElementById("nav").style.top = `-${document.getElementById("nav").clientHeight}px`;
+    document.getElementById("nav").style.top = `-${document.getElementById("nav").clientHeight + 10}px`;
   }
   prevScrollpos = currentScrollPos;
 }
@@ -127,7 +127,8 @@ function colorIssue(t) {
   document.querySelector(':root').style.setProperty('--background-color', `var(--${t}-secondary)`);
 
   for (let i = 0; i < document.querySelectorAll(".replaceLogo").length; i++) {
-    document.querySelectorAll(".replaceLogo")[i].contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue(`--${t}-primary`);
+    if (document.querySelectorAll(".replaceLogo")[i].contentDocument)
+      document.querySelectorAll(".replaceLogo")[i].contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue(`--${t}-primary`);
   }
 
   for (let i = 0; i < document.querySelectorAll(".banner").length; i++) {
@@ -142,7 +143,9 @@ function colorIssue(t) {
 
   document.querySelector("#nav").style["background-color"] = `var(--${t}-primary)`;
   document.querySelector("#nav").style["color"] = `var(--${t}-secondary)`;
-  document.querySelector("#nav .replaceLogo").contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue(`--${t}-secondary`);
+
+  if (document.querySelector("#nav .replaceLogo").contentDocument)
+    document.querySelector("#nav .replaceLogo").contentDocument.getElementById("logo").style.color = getComputedStyle(document.body).getPropertyValue(`--${t}-secondary`);
 
   document.querySelector(".subscribe button").style["background-color"] = `var(--${t}-primary)`;
   document.querySelector(".subscribe button").style["color"] = `var(--${t}-secondary)`;
@@ -175,6 +178,19 @@ window.onload = () => {
 
     o[i].onmouseleave = (e) => {
       e.target.querySelector("object").contentDocument.getElementById("youtube-icon").style.color = "white";
+    }
+  }
+
+  o = document.querySelectorAll(".email");
+  for (let i = 0; i < o.length; i++) {
+    o[i].querySelector("object").contentDocument.getElementById("email-icon").style.color = "white";
+
+    o[i].onmouseover = (e) => {
+      e.target.querySelector("object").contentDocument.getElementById("email-icon").style.color = getComputedStyle(document.body).getPropertyValue(`--color`);
+    }
+
+    o[i].onmouseleave = (e) => {
+      e.target.querySelector("object").contentDocument.getElementById("email-icon").style.color = "white";
     }
   }
 }
