@@ -238,6 +238,11 @@ body {
   min-width: 25%;
   font-weight: 300;
   transition: font-weight 450ms, opacity 450ms, flex 450ms;
+
+  .colorTileDate {
+    transition: 600ms;
+    font-weight: 300;
+  }
 }
 
 #colorTiles div:hover {
@@ -245,6 +250,19 @@ body {
   opacity: 0.8;
   flex: 1.5;
   cursor: pointer;
+
+  .colorTileDate {
+    font-weight: 700;
+  }
+}
+
+#colorTiles div span {
+  display: block;
+}
+
+#colorTiles div .colorTileDate {
+  font-size: 14pt;
+  padding: 15px 0;
 }
 
 #colorTiles div:nth-child(1) {
