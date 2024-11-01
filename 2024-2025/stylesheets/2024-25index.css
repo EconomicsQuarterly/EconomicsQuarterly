@@ -285,6 +285,11 @@ body {
   background-color: var(--4-primary);
 }
 
+#colorTiles div:nth-child(5) {
+  color: var(--5-secondary);
+  background-color: var(--5-primary);
+}
+
 #team {
   padding: 40px 40px 10px 40px;
   font-family: "DM Sans", sans-serif;

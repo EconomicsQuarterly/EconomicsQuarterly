@@ -61,6 +61,31 @@ let issues = [
         <p>Administration: Tim He, Colin Ngan, Sebastian Zhu, Howard Deng, Konnor Wan, Justin Chen, Elly Gao;</p>
     `
   },
+  {
+    path: "assets/VolumeIV.pdf",
+    articles: [ // todo update
+      "Hong Kong Economic Outlook 2024/2025",
+      "Exchange Square Interviews",
+      "Solar History in China",
+      "Recommended Holding",
+      "Investing Concepts 3: Active Investing Strategies",
+      "The Terra Luna Catastrophe",
+      "Quantum Economics — An Examination",
+      "The Effects of Social Capitalism on Economy"
+    ],
+    pages: [4, 7, 8, 9, 13, 16, 18, 22],
+    contributor_text: `
+      <p><strong>Articles</strong>: Konnor Wan; Tim He, Howard Deng, Colin Ngan, Sebastian Zhu, Thomas
+      Wu, Chloe Luo, Samson Suen, Natalie Yue, Monique Siu, Eason Huang, Helen Dai, Athena Yip, Isabella Sun, Kaleb Lau,
+      Judy Bai, Amy Liu, Joseph Wu, Bruce Chan, Tony Huang, Richard Zeng, Sebastian Ng;</p>
+      <p><strong>Layout</strong>: Justin Chen;</p>
+      <p><strong>Marketing</strong>: Sophia Swing; Daisy Chen, Irene Chen, Zoe Wai, Athena Yip, Arthur
+        Wong, Katelyn To, Jocelyn Tam, Irene Chen, Zoe Wai, Micky Lyu;</p>
+      <p><strong>Administration</strong>: Tim He, Howard Deng, Colin Ngan, Sebastian Zhu, Konnor Wan, Elly Gao;</p>
+      <p><strong>Interview</strong>: Helen Dai, Arthur Wong, Katelyn To, Howard Deng, Colin Ngan;</p>
+      <p><strong>Filming</strong>: Athena Yip, Jocelyn Tam, Sophia Swing, Sebastian Zhu, Tim He;</p>
+    `
+  },
 ];
 
 function openPopup(i) {
@@ -77,6 +102,9 @@ function openPopup(i) {
       break;
     case "IV":
       number = 4;
+      break;
+    case "V":
+      number = 5;
       break;
   }
   document.getElementById("popup-issue-number").innerText = `Issue ${i}`;

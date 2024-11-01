@@ -89,6 +89,10 @@ body {
     color: var(--4-primary)
   }
 
+  .issue-box:nth-child(5) {
+    color: var(--5-primary)
+  }
+
   .issue-box:hover {
     opacity: 0.9;
     cursor: pointer;
@@ -242,9 +246,4 @@ body {
     cursor: pointer;
     opacity: 0.7;
   }
-}
-
-.team {
-  padding: 2vw 3vw;
-  font-family: "DM Sans", sans-serif;
 }

@@ -133,3 +133,14 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+.team {
+  padding: 2vw 3vw;
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.7;
+
+  p {
+    margin-block-start: 1.5em;
+    margin-block-end: 1.5em;
+  }
+}
