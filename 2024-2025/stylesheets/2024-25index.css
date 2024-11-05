@@ -301,6 +301,13 @@ body {
   padding: 30px 40px;
   font-family: "DM Sans", sans-serif;
 
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+  }
+  @media only screen and (min-width: 500px) {
+    flex-direction: row;
+  }
+
   a {
     transition: opacity 450ms;
     color: inherit;

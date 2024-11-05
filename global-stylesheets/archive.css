@@ -50,7 +50,7 @@ body {
 #archive-container {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(90vw, 1fr));
 
   .issue-box {
     padding: 20px;
