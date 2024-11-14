@@ -63,24 +63,31 @@ let issues = [
   },
   {
     path: "assets/VolumeIV.pdf",
-    articles: [ // todo update
-      "Hong Kong Economic Outlook 2024/2025",
-      "Exchange Square Interviews",
-      "Solar History in China",
-      "Recommended Holding",
-      "Investing Concepts 3: Active Investing Strategies",
-      "The Terra Luna Catastrophe",
-      "Quantum Economics — An Examination",
-      "The Effects of Social Capitalism on Economy"
+    articles: [
+      "Interviews on Artificial Intelligence",
+      "A Quick Update on the World Economy (October 2024)",
+      "Investing Concepts 4: Investing in Loss — Negative Gearing in Australia",
+      "Peru’s Lost Decade: a Case Study of the Debt Crisis in Latin America",
+      "Power Shift: The Future of Sustainability Under Trump",
+      "The Global Semiconductors Arms Race",
+      "How have supply chain disruptions in the Middle East impacted global industries?",
+      "The Economic Impacts of Climate Change on the Global Economy",
+      "The Tax Advantages of Hong Kong",
+      "Bitcoin vs. Ethereum",
+      "The Economic Rise of Singapore",
+      "Global Chip Shortage",
+      "Dividend Stocks: What is the best portfolio choice for diversification and passive income?",
+      "Cryptocurrency Amid Regulatory Scrutiny: Stablecoins",
+      "Automation in the Workplace"
     ],
-    pages: [4, 7, 8, 9, 13, 16, 18, 22],
+    pages: [5, 6, 7, 9, 11, 12, 16, 20, 22, 23, 25, 27, 28, 30, 32],
     contributor_text: `
-      <p><strong>Articles</strong>: Konnor Wan; Tim He, Howard Deng, Colin Ngan, Sebastian Zhu, Thomas
-      Wu, Chloe Luo, Samson Suen, Natalie Yue, Monique Siu, Eason Huang, Helen Dai, Athena Yip, Isabella Sun, Kaleb Lau,
-      Judy Bai, Amy Liu, Joseph Wu, Bruce Chan, Tony Huang, Richard Zeng, Sebastian Ng;</p>
+      <p><strong>Articles</strong>: Konnor Wan; Tim He, Colin Ngan, Sebastian Zhu, Thomas
+      Wu, Samson Suen, Eason Huang, Helen Dai, Athena Yip, Kaleb Lau,
+      Judy Bai, Amy Liu, Joseph Wu, Bruce Chan, Tony Huang, Richard Zeng, Sebastian Ng, Howard Deng;</p>
       <p><strong>Layout</strong>: Justin Chen;</p>
       <p><strong>Marketing</strong>: Sophia Swing; Daisy Chen, Irene Chen, Zoe Wai, Athena Yip, Arthur
-        Wong, Katelyn To, Jocelyn Tam, Irene Chen, Zoe Wai, Micky Lyu;</p>
+        Wong, Katelyn To, Jocelyn Tam, Micky Lyu;</p>
       <p><strong>Administration</strong>: Tim He, Howard Deng, Colin Ngan, Sebastian Zhu, Konnor Wan, Elly Gao;</p>
       <p><strong>Interview</strong>: Helen Dai, Arthur Wong, Katelyn To, Howard Deng, Colin Ngan;</p>
       <p><strong>Filming</strong>: Athena Yip, Jocelyn Tam, Sophia Swing, Sebastian Zhu, Tim He;</p>

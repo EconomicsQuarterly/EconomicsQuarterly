@@ -523,3 +523,35 @@ body {
     cursor: pointer;
   }
 }
+
+#issue-focus {
+  display: block;
+  font-family: "DM Sans", sans-serif;
+  padding: 20px;
+  max-width: fit-content;
+  margin: 2vw auto 5vw auto;
+  transition: opacity 300ms, box-shadow 300ms, border 100ms;
+  border: 0 solid;
+
+  h4 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    border-bottom: 1px solid;
+  }
+
+  h5 {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+  }
+
+  .articles div {
+    padding: 4px;
+  }
+}
+
+#issue-focus:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  box-shadow: 0 1px 10px -6px rgba(31, 31, 31, 0.37);
+  border: 2px solid;
+}
