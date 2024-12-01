@@ -78,9 +78,10 @@ let issues = [
       "Global Chip Shortage",
       "Dividend Stocks: What is the best portfolio choice for diversification and passive income?",
       "Cryptocurrency Amid Regulatory Scrutiny: Stablecoins",
-      "Automation in the Workplace"
+      "Automation in the Workplace",
+      "Deportation and the American Workforce: A Looming Economic Crisis"
     ],
-    pages: [5, 6, 7, 9, 11, 12, 16, 20, 22, 23, 25, 27, 28, 30, 32],
+    pages: [5, 6, 8, 10, 12, 13, 17, 21, 23, 24, 26, 28, 29, 31, 33, 35],
     contributor_text: `
       <p><strong>Articles</strong>: Konnor Wan; Tim He, Colin Ngan, Sebastian Zhu, Thomas
       Wu, Samson Suen, Eason Huang, Helen Dai, Athena Yip, Kaleb Lau,
