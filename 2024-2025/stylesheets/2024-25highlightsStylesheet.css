@@ -265,10 +265,16 @@ body {
 }
 
 #archive-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-items: center;
+  display: grid;
+  gap: 10px;
+
+  @media only screen and (max-width: 500px) {
+    grid-template-columns: repeat(auto-fit, 90vw);
+  }
+
+  @media only screen and (min-width: 500px) {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
 
   .issue-box {
     padding: 2vw;

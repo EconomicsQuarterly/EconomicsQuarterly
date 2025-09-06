@@ -33,13 +33,13 @@
   }
 
   .banner:nth-child(odd) {
-    background-color: var(--4-complement);
-    color: var(--4-primary);
+    background-color: var(--5-complement);
+    color: var(--5-primary);
   }
 
   .banner:nth-child(even) {
-    background-color: var(--4-primary);
-    color: var(--4-complement);
+    background-color: var(--5-primary);
+    color: var(--5-complement);
   }
 
   .banner:hover {
@@ -528,7 +528,7 @@ body {
   display: block;
   font-family: "DM Sans", sans-serif;
   padding: 20px;
-  max-width: fit-content;
+  max-width: 70vw;
   margin: 2vw auto 5vw auto;
   transition: opacity 300ms, box-shadow 300ms, border 100ms;
   border: 0 solid;

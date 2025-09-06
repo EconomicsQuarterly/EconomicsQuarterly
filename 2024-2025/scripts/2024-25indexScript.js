@@ -94,6 +94,35 @@ let issues = [
       <p><strong>Filming</strong>: Athena Yip, Jocelyn Tam, Sophia Swing, Sebastian Zhu, Tim He;</p>
     `
   },
+  {
+    path: "./2024-2025/issueV.html",
+    articles: [
+      "Hong Kong’s Budget Deficit: Causes and Cures for a Sustainable Fiscal Future",
+      "Economic History: Parallels between Trump’s “Liberation Day” and Hoover’s Smoot-Hawley",
+      "How did the implementation of Trump’s tariffs on imports affect global trade dynamics, and what are the potential consequences for global economic stability and recession?",
+      "Is history repeating itself? Are Trump’s tariffs a repeat of the Smoot-Hawley incident?",
+      "How do Trump’s proposed tariffs impact long-term GDP growth in the US?",
+      "How has Trump’s planned withdrawal of EV subsidies affected car producers?",
+      "How billionaires/millionaires pay less taxes using offshore accounts",
+      "What are the economics and repercussions of China’s electronic vehicle boom?",
+      "What impacts will Trump’s tariffs have on inflation, and how will this affect the U.S. economy?",
+      "How will mass deportations affect the US economy?",
+      "How have Trump’s tariffs affected the international supply chain?"
+    ],
+    pages: ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "a9", "a10", "a11"],
+    contributor_text: `
+      <p><strong>Articles</strong>: Konnor Wan; Tim He, Howard Deng, Colin Ngan, Sebastian Zhu, Thomas
+      Wu, Chloe Luo, Samson Suen, Natalie Yue, Monique Siu, Eason Huang, Helen Dai, Athena Yip, Isabella Sun, Kaleb Lau,
+      Judy Bai, Amy Liu, Joseph Wu, Bruce Chan, Tony Huang, Richard Zeng, Sebastian Ng, Sofie Tse, Claire Fang, Katelyn
+      To;</p>
+      <p><strong>Layout</strong>: Justin Chen;</p>
+      <p><strong>Marketing</strong>: Sophia Swing; Daisy Chen, Irene Chen, Zoe Wai, Athena Yip, Arthur
+        Wong, Katelyn To, Jocelyn Tam, Micky Lyu;</p>
+      <p><strong>Administration</strong>: Tim He, Howard Deng, Colin Ngan, Sebastian Zhu, Konnor Wan, Elly Gao;</p>
+      <p><strong>Interview</strong>: Helen Dai, Arthur Wong, Katelyn To, Howard Deng, Colin Ngan;</p>
+      <p><strong>Filming</strong>: Athena Yip, Jocelyn Tam, Sophia Swing, Sebastian Zhu, Tim He;</p>
+    `
+  },
 ];
 
 function openPopup(i) {
@@ -117,15 +146,23 @@ function openPopup(i) {
   }
   document.getElementById("popup-issue-number").innerText = `Issue ${i}`;
   document.getElementById("read-button").onclick = function () {
-    window.open(`assets/Volume${i}.pdf`, '_blank');
+    window.open(issues[number - 1].path, '_blank');
   }
   document.getElementById("articles").innerHTML = '';
   for (let iter = 0; iter < issues[number - 1].articles.length; iter++) {
-    document.getElementById("articles").innerHTML += `
-        <div onclick="window.open('assets/Volume${i}.pdf#page=${issues[number - 1].pages[iter]}', '_blank');">
+    if (number !== 5) {
+      document.getElementById("articles").innerHTML += `
+        <div onclick="window.open('${issues[number - 1].path + '#page=' + issues[number - 1].pages[iter]}', '_blank');">
           ${issues[number - 1].articles[iter]}
         </div>
     `;
+    } else {
+      document.getElementById("articles").innerHTML += `
+        <div onclick="window.open('${issues[number - 1].path + '#' + issues[number - 1].pages[iter]}', '_blank');">
+          ${issues[number - 1].articles[iter]}
+        </div>
+    `;
+    }
   }
   document.querySelector(".contributor-text p").innerHTML = issues[number - 1].contributor_text;
   document.querySelector("#issue-popup").style.backgroundColor = `var(--${number}-primary)`;

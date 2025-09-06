@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  background-color: var(--5-secondary);
+  color: var(--5-primary);
+}
+
+.pre-hero {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  padding: 40px 20px 40px 20px;
+  display: inline-block;
+
+  a {
+    transition: font-weight 300ms;
+    margin-left: 25px;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--black);
+  }
+
+  img {
+    transform: rotate(180deg) translateX(-20%);
+    transition: transform 300ms;
+  }
+}
+
+.pre-hero:hover {
+  cursor: pointer;
+}
+
+.pre-hero:hover a {
+  font-weight: 200;
+}
+
+.pre-hero:hover img {
+  transform: rotate(180deg);
+}
+
+#toc {
+  font-family: "DM Sans", sans-serif;
+  padding: 3vw;
+
+  h1 {
+    font-size: clamp(50pt, 9vw, 9vw);
+    color: var(--5-primary);
+  }
+
+  h2 {
+    font-size: clamp(15pt, 3vw, 3vw);
+  }
+
+  a {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity 300ms;
+    border-bottom: 1px solid;
+  }
+
+  a:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+#highlights {
+  padding: 3vw;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(15pt, 3vw, 3vw);
+  font-weight: 600;
+
+  a, a:visited, a:active {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    opacity: 1;
+    transition: all 300ms;
+    border-bottom: 2px solid;
+  }
+
+  a:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    font-weight: 300;
+  }
+}
+
+article {
+  padding: 3vw;
+  margin-bottom: 80px;
+  font-family: "DM Sans", sans-serif;
+
+  @media only screen and (max-width: 700px) {
+    width: 90vw;
+  }
+
+  @media only screen and (min-width: 700px) {
+    width: 75vw;
+  }
+
+  h1 {
+    font-size: 17pt;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 14pt;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  section {
+    margin-top: 30px;
+
+    h2 {
+      text-align: left;
+    }
+  }
+
+  p {
+    line-height: 1.5;
+    margin-block-end: 10px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity 300ms;
+    border-bottom: 1px solid;
+    color: var(--5-primary);
+  }
+
+  a:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+.subscribe {
+  button {
+    background-color: var(--5-primary);
+    transition: opacity 300ms, background-color 300ms;
+    border: none;
+    border-radius: 5px;
+    font-family: "DM Sans", sans-serif;
+    color: var(--white);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  button:hover {
+    cursor: pointer;
+    opacity: .8;
+  }
+}
