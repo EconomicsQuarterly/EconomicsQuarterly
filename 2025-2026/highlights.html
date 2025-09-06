@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Year 2: Economics Quarterly</title>
+  <link rel="icon" href="../assets/globe-white-thick.svg">
+  <link rel="stylesheet" href="stylesheets/2025-26highlightsStylesheet.css">
+  <link rel="stylesheet" href="../global-stylesheets/include.css">
+  <script src="../global-scripts/d3.js"></script>
+  <script src="../global-scripts/analytics.js"></script>
+  <script src="../global-scripts/scrollama.js"></script>
+</head>
+<body>
+<div class="pre-hero" onclick="window.location.href = '../archive.html';">
+  <img src="../assets/icon-arrow.svg" alt="arrow">
+  <a href="../archive.html">Go back to archives</a>
+</div>
+
+<div id="hero">
+  <object type="image/svg+xml" data="../assets/logo.svg" class="logo replaceLogo"></object>
+  <div id="hero-text">
+    <h1 class="step">Economics Quarterly</h1>
+    <h2 class="step">Year 2</h2>
+    <h3 class="step">(2024/2025)</h3>
+  </div>
+</div>
+<div class="highlight" id="stats">
+  <h2 class="step">2<br/> issues</h2>
+  <h2 class="step">1<br/> interview</h2>
+  <h2 class="step">27<br/> articles</h2>
+  <h2 class="step">19,345<br/> words</h2>
+  <h2 class="step">31<br/> contributors</h2>
+</div>
+
+<div id="memorableMoments" class="step">
+  <h3>Memorable Moments</h3>
+  <div id="carousel">
+    <div id="carousel-left">
+      <p>What do Hong Kong Locals think of Artificial Intelligence?</p>
+      <iframe style="border: 0;"
+              src="https://www.youtube-nocookie.com/embed/NyOvKeYAKu0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<div id="articleWall" class="step">
+  <h3>What We Wrote</h3>
+  <div id="articleBlock">
+    <div>Interviews on Artificial Intelligence</div>
+    <div>A Quick Update on the World Economy</div>
+    <div>Investing Concepts 4: Investing in Loss — Negative Gearing in Australia</div>
+    <div>Peru’s Lost Decade: a Case Study of the Debt Crisis in Latin America</div>
+    <div>Power Shift: The Future of Sustainability Under Trump</div>
+    <div>The Global Semiconductors Arms Race</div>
+    <div>From Oil to Agriculture: The Far-Reaching Effects of Supply Chain Disruptions</div>
+    <div>The Economic Impacts of Climate Change on the Global Economy</div>
+    <div>The Tax Advantages of Hong Kong</div>
+    <div>Bitcoin vs. Ethereum</div>
+    <div>The Economic Rise of Singapore</div>
+    <div>Global Chip Shortage</div>
+    <div>Dividend Stocks: What is the best portfolio choice for diversification and passive income?</div>
+    <div>Cryptocurrency Amid Regulatory Scrutiny: Stablecoins</div>
+    <div>Automation in the Workplace</div>
+    <div>Deportation and the American Workforce: A Looming Economic Crisis</div>
+    <div>Hong Kong’s Budget Deficit: Causes and Cures for a Sustainable Fiscal Future</div>
+    <div>Economic History: Parallels between Trump’s “Liberation Day” and Hoover’s Smoot-Hawley</div>
+    <div>How did the implementation of Trump’s tariffs on imports affect global trade dynamics, and what are the
+      potential consequences for global economic stability and recession?
+    </div>
+    <div>Is History Repeating Itself? A Comparison of Trump’s Tariffs and the Smoot-Hawley Incident</div>
+    <div>How do Trump’s proposed tariffs impact long-term GDP growth in the US?</div>
+    <div>How has Trump’s planned withdrawal of EV subsidies affected car producers?</div>
+    <div>How billionaires/millionaires pay less taxes using offshore accounts</div>
+    <div>What are the economics and repercussions of China’s electronic vehicle boom?</div>
+    <div>What impacts will Trump’s tariffs have on inflation, and how will this affect the U.S. economy?</div>
+    <div>How will mass deportations affect the US economy?</div>
+    <div>How have Trump’s tariffs affected the international supply chain?</div>
+  </div>
+  <h6>Like the upcoming color schemes? 🙃</h6>
+</div>
+
+<div id="acknowledgements" class="step">
+  <h3>Acknowledgements: <br/>Our Team</h3>
+  <h6>Special thanks go to Mr. Dhakal and Mr. Jacobsen for advice and help.</h6>
+
+  <h4>Administrations</h4>
+  <p>Tim He, Howard Deng, Colin Ngan, Sebastian Zhu, Konnor Wan, Elly Gao;</p>
+
+  <h4>Articles</h4>
+  <p>Konnor Wan; Tim He, Howard Deng, Colin Ngan, Sebastian Zhu, Thomas Wu, Chloe Luo, Samson Suen, Natalie Yue, Monique
+    Siu, Eason Huang, Helen Dai, Athena Yip, Isabella Sun, Kaleb Lau, Judy Bai, Amy Liu, Joseph Wu, Bruce Chan, Tony
+    Huang, Richard Zeng, Sebastian Ng, Katelyn To, Sofie Tse, Claire Fang;</p>
+
+  <h4>Design and Layout</h4>
+  <p>Justin Chen;</p>
+
+  <h4>Interviews and Filming</h4>
+  <p>Helen Dai, Arthur Wong, Katelyn To, Howard Deng, Colin Ngan, Jocelyn Tam, Athena Yip, Sophia Swing, Sebastian Zhu,
+    Tim He;</p>
+
+  <h4>Marketing</h4>
+  <p>Sophia Swing; Daisy Chen, Irene Chen, Zoe Wai, Athena Yip, Arthur Wong, Katelyn To, Jocelyn Tam, Micky Lyu, Helen
+    Dai;</p>
+</div>
+
+<div id="thankyou" class="step">
+  <h3>Thank you, avid readers. </h3>
+  <p>You’ve collectively viewed our work <strong>1,258 times</strong> over the past year.</p>
+  <!-- - 270 from 1st year-->
+  <p><strong>That’s <em>4.7x</em> our first year!</strong></p>
+  <canvas style="width: 100%; height: 100vh;" id="visualization"></canvas>
+  <p>Special thanks to our subscribers, you motivated us to continue our writing.</p>
+</div>
+
+<div id="archive" class="step">
+  <h3 id="archive-title">2024-2025 Economics Quarterly Archive</h3>
+  <div id="archive-container">
+    <div class="issue-box" onclick="window.open('../assets/VolumeIV.pdf', '_blank');">
+      <h4>Issue 4</h4>
+      <h5>December 2024</h5>
+      <div class="articles">
+        <div>Interviews on Artificial Intelligence</div>
+        <div>A Quick Update on the World Economy</div>
+        <div>Investing Concepts 4: Investing in Loss — Negative Gearing in Australia</div>
+        <div>Peru’s Lost Decade: a Case Study of the Debt Crisis in Latin America</div>
+        <div>Power Shift: The Future of Sustainability Under Trump</div>
+        <div>The Global Semiconductors Arms Race</div>
+        <div>From Oil to Agriculture: The Far-Reaching Effects of Supply Chain Disruptions</div>
+        <div>The Economic Impacts of Climate Change on the Global Economy</div>
+        <div>The Tax Advantages of Hong Kong</div>
+        <div>Bitcoin vs. Ethereum</div>
+        <div>The Economic Rise of Singapore</div>
+        <div>Global Chip Shortage</div>
+        <div>Dividend Stocks: What is the best portfolio choice for diversification and passive income?</div>
+        <div>Cryptocurrency Amid Regulatory Scrutiny: Stablecoins</div>
+        <div>Automation in the Workplace</div>
+        <div>Deportation and the American Workforce: A Looming Economic Crisis</div>
+      </div>
+    </div>
+    <div style="color: var(--5-primary);" class="issue-box" onclick="window.open('./index.html', '_blank');">
+      <h4>Issue 5</h4>
+      <h5>September 2025</h5>
+      <div class="articles">
+        <div>Hong Kong’s Budget Deficit: Causes and Cures for a Sustainable Fiscal Future</div>
+        <div>Economic History: Parallels between Trump’s “Liberation Day” and Hoover’s Smoot-Hawley</div>
+        <div>How did the implementation of Trump’s tariffs on imports affect global trade dynamics, and what are the
+          potential consequences for global economic stability and recession?
+        </div>
+        <div>Is History Repeating Itself? A Comparison of Trump’s Tariffs and the Smoot-Hawley Incident</div>
+        <div>How do Trump’s proposed tariffs impact long-term GDP growth in the US?</div>
+        <div>How has Trump’s planned withdrawal of EV subsidies affected car producers?</div>
+        <div>How billionaires/millionaires pay less taxes using offshore accounts</div>
+        <div>What are the economics and repercussions of China’s electronic vehicle boom?</div>
+        <div>What impacts will Trump’s tariffs have on inflation, and how will this affect the U.S. economy?</div>
+        <div>How will mass deportations affect the US economy?</div>
+        <div>How have Trump’s tariffs affected the international supply chain?</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="subscribe">
+  <div id="logo">
+    <img class="replaceLogo" src="../assets/logo.svg" alt=""/>
+  </div>
+  <div id="text">
+    <h2>Subscribe</h2>
+    <p>Receive future issues directly in your inbox.</p>
+    <button onclick="window.open('https://forms.gle/k7jvYSbeH7FtmACB8', '_blank');">Subscribe now</button>
+  </div>
+</div>
+
+<div class="pre-hero" onclick="window.location.href = '../archive.html';">
+  <img src="../assets/icon-arrow.svg" alt="arrow">
+  <a href="../archive.html">Go back to archives</a>
+</div>
+</body>
+
+<script defer src="scripts/2025-26highlightsScrollScript.js"></script>
+<script defer src="scripts/2025-26highlightsScript.js" type="module"></script>
+</html>

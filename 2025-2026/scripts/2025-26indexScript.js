@@ -11,7 +11,7 @@ window.onscroll = function () {
 
 let issues = [
   {
-    path: "../assets/VolumeI.pdf",
+    path: "assets/VolumeI.pdf",
     articles: [
       "US, China, EU Macroeconomic Outlook Late 2023 / Early 2024",
       "Recommended Holding",
@@ -25,7 +25,7 @@ let issues = [
     `
   },
   {
-    path: "../assets/VolumeII.pdf",
+    path: "assets/VolumeII.pdf",
     articles: [
       "Hong Kong Economic Outlook 2024/2025",
       "Hong Kong: Houses, Taxes, and Monopolies",
@@ -42,7 +42,7 @@ let issues = [
     `
   },
   {
-    path: "../assets/VolumeIII.pdf",
+    path: "assets/VolumeIII.pdf",
     articles: [
       "Hong Kong Economic Outlook 2024/2025",
       "Exchange Square Interviews",
@@ -62,7 +62,7 @@ let issues = [
     `
   },
   {
-    path: "../assets/VolumeIV.pdf",
+    path: "assets/VolumeIV.pdf",
     articles: [
       "Interviews on Artificial Intelligence",
       "A Quick Update on the World Economy",
@@ -95,7 +95,7 @@ let issues = [
     `
   },
   {
-    path: "issueV.html",
+    path: "./2024-2025/issueV.html",
     articles: [
       "Hong Kong’s Budget Deficit: Causes and Cures for a Sustainable Fiscal Future",
       "Economic History: Parallels between Trump’s “Liberation Day” and Hoover’s Smoot-Hawley",
