@@ -100,7 +100,7 @@ let issues = [
       "Hong Kong’s Budget Deficit: Causes and Cures for a Sustainable Fiscal Future",
       "Economic History: Parallels between Trump’s “Liberation Day” and Hoover’s Smoot-Hawley",
       "How did the implementation of Trump’s tariffs on imports affect global trade dynamics, and what are the potential consequences for global economic stability and recession?",
-      "Is history repeating itself? Are Trump’s tariffs a repeat of the Smoot-Hawley incident?",
+      "Is History Repeating Itself? A Comparison of Trump’s Tariffs and the Smoot-Hawley Incident",
       "How do Trump’s proposed tariffs impact long-term GDP growth in the US?",
       "How has Trump’s planned withdrawal of EV subsidies affected car producers?",
       "How billionaires/millionaires pay less taxes using offshore accounts",
