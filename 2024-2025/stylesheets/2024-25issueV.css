@@ -40,6 +40,15 @@ body {
 #toc {
   font-family: "DM Sans", sans-serif;
   padding: 3vw;
+  box-sizing: border-box;
+
+  @media only screen and (max-width: 700px) {
+    width: 100vw;
+  }
+
+  @media only screen and (min-width: 700px) {
+    width: 75vw;
+  }
 
   h1 {
     font-size: clamp(50pt, 9vw, 9vw);
@@ -66,6 +75,7 @@ body {
 }
 
 #highlights {
+  margin-top: 150px;
   padding: 3vw;
   font-family: "DM Sans", sans-serif;
   font-size: clamp(15pt, 3vw, 3vw);
@@ -134,23 +144,28 @@ article:nth-child(4n + 3) {
     h2 {
       color: var(--5-primary);
     }
-    
+
     background-color: rgba(from var(--5-complement) r g b);
   }
 }
 
 article {
   border-top: 2px dotted;
-  padding: calc(3vw + 50px) 3vw;
+  padding-top: calc(3vw + 50px);
+  padding-bottom: calc(3vw + 50px);
   font-family: "DM Sans", sans-serif;
   box-sizing: border-box;
+  margin: auto;
 
   @media only screen and (max-width: 700px) {
     width: 100vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
   }
 
   @media only screen and (min-width: 700px) {
-    width: 75vw;
+    padding-left: 12.5vw;
+    padding-right: 12.5vw;
   }
 
   h1 {
