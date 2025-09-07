@@ -109,6 +109,7 @@ article:nth-child(4n) {
 article:nth-child(4n + 2) {
   background-color: rgb(from var(--5-primary) r g b / 0.1);
   color: var(--5-primary);
+  font-family: "PT Serif", "Georgia", serif;
 
   .bibliography {
     background-color: rgba(from var(--5-complement) r g b / 0.7);
@@ -118,6 +119,7 @@ article:nth-child(4n + 2) {
 article:nth-child(4n + 1) {
   background-color: var(--5-primary);
   color: var(--white);
+  font-family: "PT Serif", "Georgia", serif;
 
   h1, h2, h3, img + p strong {
     color: var(--5-complement);
