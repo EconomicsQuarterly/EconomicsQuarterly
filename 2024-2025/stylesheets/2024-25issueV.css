@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: var(--5-secondary);
+  background-color: var(--white);
   color: var(--5-primary);
 }
 
@@ -9,6 +9,7 @@ body {
   font-weight: 600;
   padding: 40px 20px 40px 20px;
   display: inline-block;
+  color: var(--black);
 
   a {
     transition: font-weight 300ms;
@@ -86,13 +87,58 @@ body {
   }
 }
 
+article:nth-child(4n) {
+  background-color: var(--white);
+  color: var(--5-primary);
+
+  .bibliography {
+    background-color: rgba(from var(--5-complement) r g b / 0.7);
+  }
+}
+
+article:nth-child(4n + 2) {
+  background-color: rgb(from var(--5-primary) r g b / 0.1);
+  color: var(--5-primary);
+
+  .bibliography {
+    background-color: rgba(from var(--5-complement) r g b / 0.7);
+  }
+}
+
+article:nth-child(4n + 1) {
+  background-color: var(--5-primary);
+  color: var(--white);
+
+  h1, h2, h3, img + p strong {
+    color: var(--5-complement);
+  }
+
+  .bibliography {
+    background-color: rgba(from var(--5-complement) r g b);
+  }
+}
+
+article:nth-child(4n + 3) {
+  background-color: var(--5-primary);
+  color: rgb(from var(--5-complement) r g b / 1.5);
+
+  h1, h2, h3, img + p strong {
+    color: var(--5-complement);
+  }
+
+  .bibliography {
+    background-color: rgba(from var(--5-complement) r g b);
+  }
+}
+
 article {
-  padding: 3vw;
-  margin-bottom: 80px;
+  border-top: 2px dotted;
+  padding: calc(3vw + 50px) 3vw;
   font-family: "DM Sans", sans-serif;
+  box-sizing: border-box;
 
   @media only screen and (max-width: 700px) {
-    width: 90vw;
+    width: 100vw;
   }
 
   @media only screen and (min-width: 700px) {
@@ -110,11 +156,23 @@ article {
     text-align: right;
   }
 
-  section {
+  img + p strong {
+    text-align: center;
+    display: block;
+  }
+
+  .bibliography {
+    color: var(--5-primary);
+    padding: 30px;
     margin-top: 30px;
 
     h2 {
       text-align: left;
+      margin-block-start: 0;
+    }
+
+    p {
+      word-break: break-word;
     }
   }
 
@@ -125,6 +183,10 @@ article {
 
   img {
     max-width: 100%;
+    max-height: 400px;
+    margin: auto;
+    display: block;
+    background-color: var(--white);
   }
 
   a {
@@ -132,7 +194,7 @@ article {
     opacity: 1;
     transition: opacity 300ms;
     border-bottom: 1px solid;
-    color: var(--5-primary);
+    color: inherit;
   }
 
   a:hover {
