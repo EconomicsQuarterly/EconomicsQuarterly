@@ -106,7 +106,7 @@ let issues = [
       "How billionaires pay less taxes using offshore accounts",
       "What are the economics and repercussions of China’s electronic vehicle boom?",
       "What impacts will Trump’s tariffs have on inflation, and how will this affect the U.S. economy?",
-      "How will mass deportations affect the US economy?",
+      "The Economic Ripple Effect: The Impact of Deportations Under the Trump Administration",
       "How have Trump’s tariffs affected the international supply chain?"
     ],
     pages: ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "a9", "a10", "a11"],
