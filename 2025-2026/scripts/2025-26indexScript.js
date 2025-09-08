@@ -103,7 +103,7 @@ let issues = [
       "Is History Repeating Itself? A Comparison of Trump’s Tariffs and the Smoot-Hawley Incident",
       "How do Trump’s proposed tariffs impact long-term GDP growth in the US?",
       "How has Trump’s planned withdrawal of EV subsidies affected car producers?",
-      "How billionaires/millionaires pay less taxes using offshore accounts",
+      "How billionaires pay less taxes using offshore accounts",
       "What are the economics and repercussions of China’s electronic vehicle boom?",
       "What impacts will Trump’s tariffs have on inflation, and how will this affect the U.S. economy?",
       "How will mass deportations affect the US economy?",
