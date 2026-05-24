@@ -11,17 +11,18 @@ window.onscroll = function () {
 
 let issues = [
   {
-    path: "assets/VolumeI.pdf",
+    path: "./2025-2026/issueVI.html",
     articles: [
-      "US, China, EU Macroeconomic Outlook Late 2023 / Early 2024",
-      "Recommended Holding",
-      "Why Oil Prices are on the Rise, Again",
-      "Scrubbing Off The Green",
-      "Investing Concepts 1: Fundamental Analysis"
+      "The Unraveling of a Model: Germany’s Industrial Contraction as a Microcosm of the Global Economic Slowdown",
+      "United States: Political Polarisation and Its Impact on Economic Stability",
+      "The Hidden Carbon Cost of the Cloud",
+      "Neoliberalism, War, and Global Slowdown",
+      "As Trump Threatens to Leave North American Deal, Supporters Urge Him to ‘Do No Harm’"
     ],
-    pages: [3, 5, 8, 9, 11],
+    pages: ["a1", "a2","a3","a4","a5"],
     contributor_text: `
-      <p>Written by Colin Ngan, Tim He, Sebastian Zhu; Layout by Justin Chen; Logo and cover by Felisha Wang</p>
+      <p><strong>Articles</strong>: Head Name; Member1, Member2;</p>
+      <p><strong>Layout</strong>: Justin Chen;</p>
     `
   },
   {
@@ -143,6 +144,9 @@ function openPopup(i) {
     case "V":
       number = 5;
       break;
+     case "VI":
+       number = 6;
+       break;
   }
   document.getElementById("popup-issue-number").innerText = `Issue ${i}`;
   document.getElementById("read-button").onclick = function () {

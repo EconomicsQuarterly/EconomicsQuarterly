@@ -1,0 +1,250 @@
+body {
+  margin: 0;
+  background-color: var(--white);
+  color: var(--5-primary);
+}
+
+.pre-hero {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  padding: 40px 20px 40px 20px;
+  display: inline-block;
+  color: var(--black);
+
+  a {
+    transition: font-weight 300ms;
+    margin-left: 25px;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--black);
+  }
+
+  img {
+    transform: rotate(180deg) translateX(-20%);
+    transition: transform 300ms;
+  }
+}
+
+.pre-hero:hover {
+  cursor: pointer;
+}
+
+.pre-hero:hover a {
+  font-weight: 200;
+}
+
+.pre-hero:hover img {
+  transform: rotate(180deg);
+}
+
+#toc {
+  font-family: "DM Sans", sans-serif;
+  padding: 3vw;
+  box-sizing: border-box;
+
+  @media only screen and (max-width: 700px) {
+    width: 100vw;
+  }
+
+  @media only screen and (min-width: 700px) {
+    width: 75vw;
+  }
+
+  h1 {
+    font-size: clamp(50pt, 9vw, 9vw);
+    color: var(--5-primary);
+  }
+
+  h2 {
+    font-size: clamp(15pt, 3vw, 3vw);
+  }
+
+  a {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity 300ms;
+    border-bottom: 1px solid;
+  }
+
+  a:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+#highlights {
+  margin-top: 150px;
+  padding: 3vw;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(15pt, 3vw, 3vw);
+  font-weight: 600;
+
+  a, a:visited, a:active {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    opacity: 1;
+    transition: all 300ms;
+    border-bottom: 2px solid;
+  }
+
+  a:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    font-weight: 300;
+  }
+}
+
+article:nth-child(4n) {
+  background-color: var(--white);
+  color: var(--5-primary);
+
+  .bibliography {
+    background-color: rgba(from var(--5-complement) r g b / 0.7);
+  }
+}
+
+article:nth-child(4n + 2) {
+  background-color: rgb(from var(--5-primary) r g b / 0.1);
+  color: var(--5-primary);
+  font-family: "PT Serif", "Georgia", serif;
+
+  .bibliography {
+    background-color: rgba(from var(--5-complement) r g b / 0.7);
+  }
+}
+
+article:nth-child(4n + 1) {
+  background-color: var(--5-primary);
+  color: var(--white);
+  font-family: "PT Serif", "Georgia", serif;
+
+  h1, h2, h3, img + p strong {
+    color: var(--5-complement);
+  }
+
+  .bibliography {
+    h2 {
+      color: var(--5-primary);
+    }
+
+    background-color: rgba(from var(--5-complement) r g b);
+  }
+}
+
+article:nth-child(4n + 3) {
+  background-color: var(--5-primary);
+  color: rgb(from var(--5-complement) r g b / 1.5);
+
+  h1, h2, h3, img + p strong {
+    color: var(--5-complement);
+  }
+
+  .bibliography {
+    h2 {
+      color: var(--5-primary);
+    }
+
+    background-color: rgba(from var(--5-complement) r g b);
+  }
+}
+
+article {
+  border-top: 2px dotted;
+  padding-top: calc(3vw + 50px);
+  padding-bottom: calc(3vw + 50px);
+  font-family: "DM Sans", sans-serif;
+  box-sizing: border-box;
+  margin: auto;
+
+  @media only screen and (max-width: 700px) {
+    width: 100vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  @media only screen and (min-width: 700px) {
+    padding-left: 12.5vw;
+    padding-right: 12.5vw;
+  }
+
+  h1 {
+    font-size: 17pt;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 14pt;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  img + p strong {
+    text-align: center;
+    display: block;
+  }
+
+  .bibliography {
+    color: var(--5-primary);
+    padding: 30px;
+    margin-top: 30px;
+
+    h2 {
+      text-align: left;
+      margin-block-start: 0;
+    }
+
+    p {
+      word-break: break-word;
+    }
+  }
+
+  p {
+    line-height: 1.5;
+    margin-block-end: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 400px;
+    margin: auto;
+    display: block;
+    background-color: var(--white);
+  }
+
+  a {
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity 300ms;
+    border-bottom: 1px solid;
+    color: inherit;
+  }
+
+  a:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+.subscribe {
+  button {
+    background-color: var(--5-primary);
+    transition: opacity 300ms, background-color 300ms;
+    border: none;
+    border-radius: 5px;
+    font-family: "DM Sans", sans-serif;
+    color: var(--white);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  button:hover {
+    cursor: pointer;
+    opacity: .8;
+  }
+}
