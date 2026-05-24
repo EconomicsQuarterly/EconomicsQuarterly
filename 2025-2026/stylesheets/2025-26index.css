@@ -54,44 +54,59 @@
     @media only screen and (min-width: 530px) {
       display: flex;
     }
-    justify-content: center;
+    justify-content: space-between;
     max-width: 100%;
     height: clamp(40px, 3vw, 75px);
-    align-items: center;
-    padding: 1vh;
+    padding: 2vh 2vh;
 
-    .nav-logo {
-      display: inline;
-      height: clamp(20px, 100%, 40px);
-      margin-right: 0;
+    .center {
+      display: flex;
+      gap: 15px;
+      height: 100%;
+
+      .nav-logo {
+        display: inline;
+        width: clamp(20px, 100%, 40px);
+        height: clamp(20px, 100%, 40px);
+        margin-right: 0;
+      }
+
+      h1 {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        vertical-align: middle;
+        font-family: "PT Serif", georgia, serif;
+        font-size: clamp(14pt, 2vw, 18pt);
+        font-weight: 600;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
     }
 
-    h1 {
-      margin-block-start: 0;
-      margin-block-end: 0;
-      vertical-align: middle;
-      padding: 3vw;
-      font-family: "PT Serif", georgia, serif;
-      font-size: clamp(14pt, 2vw, 18pt);
-      font-weight: 600;
-    }
+    .right {
+      justify-content: space-between;
+      display: flex;
+      gap: 30px;
+      height: 100%;
+      align-items: center;
 
-    a {
-      font-family: "DM Sans", sans-serif;
-      border-bottom: 1px solid;
-      margin-left: auto;
-      right: 3vw;
-      font-size: clamp(10pt, 1.5vw, 15pt);
-      position: absolute;
-      font-weight: 600;
-      transition: font-weight 450ms;
-      text-decoration: none;
-      color: inherit;
-    }
+      a {
+        font-family: "DM Sans", sans-serif;
+        border-bottom: 1px solid;
+        font-size: clamp(10pt, 1.5vw, 15pt);
+        font-weight: 600;
+        transition: font-weight 450ms;
+        text-decoration: none;
+        color: inherit;
+        height: fit-content;
+        display: block;
+      }
 
-    a:hover {
-      font-weight: 200;
-      cursor: pointer;
+      a:hover {
+        font-weight: 200;
+        cursor: pointer;
+      }
     }
   }
 }
