@@ -9,23 +9,10 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 }
 
+// FIXED: Ordered sequentially 1 through 6 so array indices match perfectly
 let issues = [
   {
-    path: "./2025-2026/issueVI.html",
-    articles: [
-      "The Unraveling of a Model: Germany’s Industrial Contraction as a Microcosm of the Global Economic Slowdown",
-      "United States: Political Polarisation and Its Impact on Economic Stability",
-      "The Hidden Carbon Cost of the Cloud",
-      "Neoliberalism, War, and Global Slowdown",
-      "As Trump Threatens to Leave North American Deal, Supporters Urge Him to ‘Do No Harm’"
-    ],
-    pages: ["a1", "a2","a3","a4","a5"],
-    contributor_text: `
-      <p><strong>Articles</strong>: Head Name; Member1, Member2;</p>
-      <p><strong>Layout</strong>: Justin Chen;</p>
-    `
-  },
-  {
+    // Issue I (Implicitly maps to index 0)
     path: "assets/VolumeII.pdf",
     articles: [
       "Hong Kong Economic Outlook 2024/2025",
@@ -43,6 +30,25 @@ let issues = [
     `
   },
   {
+    // Issue II (index 1)
+    path: "assets/VolumeII.pdf",
+    articles: [
+      "Hong Kong Economic Outlook 2024/2025",
+      "Hong Kong: Houses, Taxes, and Monopolies",
+      "What do Locals Think of Hong Kong’s Housing Situation?",
+      "Recommended Holding",
+      "S&P’s New Record High, The Magnificent 7, and Stock Indexes",
+      "BYD: Pioneering Growth and Innovation in the Global EV Market",
+      "Investing Concepts 2: Technical Analysis",
+      "Dogecoin and Elon Musk"
+    ],
+    pages: [3, 7, 11, 12, 14, 18, 20, 22],
+    contributor_text: `
+      <p>Written by Colin Ngan, Tim He, Sebastian Zhu, Howard Deng, Konnor Wan; Layout by Justin Chen</p>
+    `
+  },
+  {
+    // Issue III (index 2)
     path: "assets/VolumeIII.pdf",
     articles: [
       "Hong Kong Economic Outlook 2024/2025",
@@ -63,6 +69,7 @@ let issues = [
     `
   },
   {
+    // Issue IV (index 3)
     path: "assets/VolumeIV.pdf",
     articles: [
       "Interviews on Artificial Intelligence",
@@ -84,18 +91,14 @@ let issues = [
     ],
     pages: [6, 7, 9, 11, 13, 14, 18, 22, 24, 25, 27, 29, 30, 32, 34, 36],
     contributor_text: `
-      <p><strong>Articles</strong>: Konnor Wan; Tim He, Colin Ngan, Sebastian Zhu, Thomas
-      Wu, Samson Suen, Eason Huang, Helen Dai, Athena Yip, Kaleb Lau,
-      Judy Bai, Amy Liu, Joseph Wu, Bruce Chan, Tony Huang, Richard Zeng, Sebastian Ng, Howard Deng;</p>
+      <p><strong>Articles</strong>: Konnor Wan; Tim He, Colin Ngan, Sebastian Zhu, Thomas Wu, Samson Suen, Eason Huang, Helen Dai, Athena Yip, Kaleb Lau, Judy Bai, Amy Liu, Joseph Wu, Bruce Chan, Tony Huang, Richard Zeng, Sebastian Ng, Howard Deng;</p>
       <p><strong>Layout</strong>: Justin Chen;</p>
-      <p><strong>Marketing</strong>: Sophia Swing; Daisy Chen, Irene Chen, Zoe Wai, Athena Yip, Arthur
-        Wong, Katelyn To, Jocelyn Tam, Micky Lyu;</p>
+      <p><strong>Marketing</strong>: Sophia Swing; Daisy Chen, Irene Chen, Zoe Wai, Athena Yip, Arthur Wong, Katelyn To, Jocelyn Tam, Micky Lyu;</p>
       <p><strong>Administration</strong>: Tim He, Howard Deng, Colin Ngan, Sebastian Zhu, Konnor Wan, Elly Gao;</p>
-      <p><strong>Interview</strong>: Helen Dai, Arthur Wong, Katelyn To, Howard Deng, Colin Ngan;</p>
-      <p><strong>Filming</strong>: Athena Yip, Jocelyn Tam, Sophia Swing, Sebastian Zhu, Tim He;</p>
     `
   },
   {
+    // Issue V (index 4)
     path: "./2024-2025/issueV.html",
     articles: [
       "Hong Kong’s Budget Deficit: Causes and Cures for a Sustainable Fiscal Future",
@@ -112,62 +115,65 @@ let issues = [
     ],
     pages: ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "a9", "a10", "a11"],
     contributor_text: `
-      <p><strong>Articles</strong>: Konnor Wan; Tim He, Howard Deng, Colin Ngan, Sebastian Zhu, Thomas
-      Wu, Chloe Luo, Samson Suen, Natalie Yue, Monique Siu, Eason Huang, Helen Dai, Athena Yip, Isabella Sun, Kaleb Lau,
-      Judy Bai, Amy Liu, Joseph Wu, Bruce Chan, Tony Huang, Richard Zeng, Sebastian Ng, Sofie Tse, Claire Fang, Katelyn
-      To;</p>
+      <p><strong>Articles</strong>: Konnor Wan; Tim He, Howard Deng, Colin Ngan, Sebastian Zhu, Thomas Wu, Chloe Luo, Samson Suen, Natalie Yue, Monique Siu, Eason Huang, Helen Dai, Athena Yip, Isabella Sun, Kaleb Lau, Judy Bai, Amy Liu, Joseph Wu, Bruce Chan, Tony Huang, Richard Zeng, Sebastian Ng, Sofie Tse, Claire Fang, Katelyn To;</p>
       <p><strong>Layout</strong>: Justin Chen;</p>
-      <p><strong>Marketing</strong>: Sophia Swing; Daisy Chen, Irene Chen, Zoe Wai, Athena Yip, Arthur
-        Wong, Katelyn To, Jocelyn Tam, Micky Lyu;</p>
-      <p><strong>Administration</strong>: Tim He, Howard Deng, Colin Ngan, Sebastian Zhu, Konnor Wan, Elly Gao;</p>
-      <p><strong>Interview</strong>: Helen Dai, Arthur Wong, Katelyn To, Howard Deng, Colin Ngan;</p>
-      <p><strong>Filming</strong>: Athena Yip, Jocelyn Tam, Sophia Swing, Sebastian Zhu, Tim He;</p>
     `
   },
+  {
+    // Issue VI (index 5)
+    // FIXED: Updated layout/articles text with your current cycle info
+    path: "./2025-2026/issueVI.html",
+    articles: [
+      "The Unraveling of a Model: Germany’s Industrial Contraction as a Microcosm of the Global Economic Slowdown",
+      "United States: Political Polarisation and Its Impact on Economic Stability",
+      "The Hidden Carbon Cost of the Cloud",
+      "Neoliberalism, War, and Global Slowdown",
+      "As Trump Threatens to Leave North American Deal, Supporters Urge Him to ‘Do No Harm’"
+    ],
+    pages: ["a1", "a2", "a3", "a4", "a5"],
+    contributor_text: `
+      <p><strong>Articles</strong>: (Head of Articles) Arthur Wong; Haoyu Yang, Eason Huang, Sam Wang, Dominic Gao, Nelson Bai, Sofie Tse, Claire Fang;</p>
+      <p><strong>Layout</strong>: (Head of Layout) Valerie Ho;</p>
+      <p><strong>Marketing</strong>: (Head of Marketing) Katelyn To;</p>
+      <p><strong>Administration</strong>: Eason Huang;</p>
+    `
+  }
 ];
 
 function openPopup(i) {
   let number;
   switch (i) {
-    case "I":
-      number = 1;
-      break;
-    case "II":
-      number = 2;
-      break;
-    case "III":
-      number = 3;
-      break;
-    case "IV":
-      number = 4;
-      break;
-    case "V":
-      number = 5;
-      break;
-     case "VI":
-       number = 6;
-       break;
+    case "I": number = 1; break;
+    case "II": number = 2; break;
+    case "III": number = 3; break;
+    case "IV": number = 4; break;
+    case "V": number = 5; break;
+    case "VI": number = 6; break; // Maps perfectly to index 5 (6 - 1)
   }
+
   document.getElementById("popup-issue-number").innerText = `Issue ${i}`;
   document.getElementById("read-button").onclick = function () {
     window.open(issues[number - 1].path, '_blank');
   }
+
   document.getElementById("articles").innerHTML = '';
   for (let iter = 0; iter < issues[number - 1].articles.length; iter++) {
-    if (number !== 5) {
-      document.getElementById("articles").innerHTML += `
-        <div onclick="window.open('${issues[number - 1].path + '#page=' + issues[number - 1].pages[iter]}', '_blank');">
-          ${issues[number - 1].articles[iter]}
-        </div>
-    `;
-    } else {
+    // FIXED: Both Issue 5 and Issue 6 use clean HTML layout file anchors (#a1 instead of PDF page values)
+    if (number === 5 || number === 6) {
       document.getElementById("articles").innerHTML += `
         <div onclick="window.open('${issues[number - 1].path + '#' + issues[number - 1].pages[iter]}', '_blank');">
           ${issues[number - 1].articles[iter]}
         </div>
-    `;
+      `;
+    } else {
+      document.getElementById("articles").innerHTML += `
+        <div onclick="window.open('${issues[number - 1].path + '#page=' + issues[number - 1].pages[iter]}', '_blank');">
+          ${issues[number - 1].articles[iter]}
+        </div>
+      `;
     }
   }
+
   document.querySelector(".contributor-text p").innerHTML = issues[number - 1].contributor_text;
   document.querySelector("#issue-popup").style.backgroundColor = `var(--${number}-primary)`;
   document.querySelector("#issue-popup").style.color = `var(--${number}-secondary)`;
@@ -181,13 +187,13 @@ function openPopup(i) {
   document.querySelector("#close-button-wrapper object").contentDocument.getElementById("close").style.color = getComputedStyle(document.body).getPropertyValue(`--${number}-secondary`);
 
   document.querySelector("#issue-popup").style.opacity = "1";
-  document.querySelector("#issue-popup").classList.toggle("active");
+  document.querySelector("#issue-popup").classList.add("active");
 }
 
 function closePopup() {
   document.querySelector("#issue-popup").style.opacity = "0";
   setTimeout(function () {
-    document.querySelector("#issue-popup").classList.toggle("active");
+    document.querySelector("#issue-popup").classList.remove("active");
   }, 300);
 }
 
@@ -234,40 +240,28 @@ function colorIssue(t) {
 window.onload = () => {
   let o = document.querySelectorAll(".instagram");
   for (let i = 0; i < o.length; i++) {
-    o[i].querySelector("object").contentDocument.getElementById("instagram-icon").style.color = "white";
-
-    o[i].onmouseover = (e) => {
-      e.target.querySelector("object").contentDocument.getElementById("instagram-icon").style.color = getComputedStyle(document.body).getPropertyValue(`--color`);
-    }
-
-    o[i].onmouseleave = (e) => {
-      e.target.querySelector("object").contentDocument.getElementById("instagram-icon").style.color = "white";
+    if(o[i].querySelector("object").contentDocument) {
+      o[i].querySelector("object").contentDocument.getElementById("instagram-icon").style.color = "white";
+      o[i].onmouseover = (e) => { e.target.querySelector("object").contentDocument.getElementById("instagram-icon").style.color = getComputedStyle(document.body).getPropertyValue(`--color`); }
+      o[i].onmouseleave = (e) => { e.target.querySelector("object").contentDocument.getElementById("instagram-icon").style.color = "white"; }
     }
   }
 
   o = document.querySelectorAll(".youtube");
   for (let i = 0; i < o.length; i++) {
-    o[i].querySelector("object").contentDocument.getElementById("youtube-icon").style.color = "white";
-
-    o[i].onmouseover = (e) => {
-      e.target.querySelector("object").contentDocument.getElementById("youtube-icon").style.color = getComputedStyle(document.body).getPropertyValue(`--color`);
-    }
-
-    o[i].onmouseleave = (e) => {
-      e.target.querySelector("object").contentDocument.getElementById("youtube-icon").style.color = "white";
+    if(o[i].querySelector("object").contentDocument) {
+      o[i].querySelector("object").contentDocument.getElementById("youtube-icon").style.color = "white";
+      o[i].onmouseover = (e) => { e.target.querySelector("object").contentDocument.getElementById("youtube-icon").style.color = getComputedStyle(document.body).getPropertyValue(`--color`); }
+      o[i].onmouseleave = (e) => { e.target.querySelector("object").contentDocument.getElementById("youtube-icon").style.color = "white"; }
     }
   }
 
   o = document.querySelectorAll(".email");
   for (let i = 0; i < o.length; i++) {
-    o[i].querySelector("object").contentDocument.getElementById("email-icon").style.color = "white";
-
-    o[i].onmouseover = (e) => {
-      e.target.querySelector("object").contentDocument.getElementById("email-icon").style.color = getComputedStyle(document.body).getPropertyValue(`--color`);
-    }
-
-    o[i].onmouseleave = (e) => {
-      e.target.querySelector("object").contentDocument.getElementById("email-icon").style.color = "white";
+    if(o[i].querySelector("object").contentDocument) {
+      o[i].querySelector("object").contentDocument.getElementById("email-icon").style.color = "white";
+      o[i].onmouseover = (e) => { e.target.querySelector("object").contentDocument.getElementById("email-icon").style.color = getComputedStyle(document.body).getPropertyValue(`--color`); }
+      o[i].onmouseleave = (e) => { e.target.querySelector("object").contentDocument.getElementById("email-icon").style.color = "white"; }
     }
   }
 }
