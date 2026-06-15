@@ -130,9 +130,9 @@ let issues = [
       "Neoliberalism, War, and Global Slowdown",
       "As Trump Threatens to Leave North American Deal, Supporters Urge Him to ‘Do No Harm’"
     ],
-    pages: ["a1", "a2", "a3", "a4", "a5"],
+    pages: ["a1", "a2", "a3", "a4", "a5","a6"],
     contributor_text: `
-      <p><strong>Articles</strong>: (Head of Articles) Arthur Wong; Haoyu Yang, Eason Huang, Sam Wang, Dominic Gao, Nelson Bai, Sofie Tse, Claire Fang;</p>
+      <p><strong>Articles</strong>: (Head of Articles) Arthur Wong; Haoyu Yang, Eason Huang, Sam Wang, Dominic Gao, Nelson Bai, Sofie Tse, Valerie Ho;</p>
       <p><strong>Layout</strong>: (Head of Layout) Valerie Ho;</p>
       <p><strong>Marketing</strong>: (Head of Marketing) Katelyn To;</p>
       <p><strong>Administration</strong>: Eason Huang;</p>
