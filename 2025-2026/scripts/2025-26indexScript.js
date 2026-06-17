@@ -128,10 +128,9 @@ let issues = [
       "United States: Political Polarisation and Its Impact on Economic Stability",
       "The Hidden Carbon Cost of the Cloud",
       "Neoliberalism, War, and Global Slowdown",
-      "As Trump Threatens to Leave North American Deal, Supporters Urge Him to ‘Do No Harm’",
-      "How the Global Debt Crisis is Trapping Emerging Economies"
+      "As Trump Threatens to Leave North American Deal, Supporters Urge Him to ‘Do No Harm’"
     ],
-    pages: ["a1", "a2", "a3", "a4", "a5","a6"],
+    pages: ["a1", "a2", "a3", "a4", "a5"],
     contributor_text: `
       <p><strong>Articles</strong>: (Head of Articles) Arthur Wong; Haoyu Yang, Eason Huang, Sam Wang, Dominic Gao, Nelson Bai, Sofie Tse, Valerie Ho;</p>
       <p><strong>Layout</strong>: (Head of Layout) Valerie Ho;</p>
@@ -149,7 +148,7 @@ function openPopup(i) {
     case "III": number = 3; break;
     case "IV": number = 4; break;
     case "V": number = 5; break;
-    case "VI": number = 6; break; // Maps perfectly to index 5 (6 - 1)
+    case "VI": number = 6; break;
   }
 
   document.getElementById("popup-issue-number").innerText = `Issue ${i}`;
@@ -159,7 +158,6 @@ function openPopup(i) {
 
   document.getElementById("articles").innerHTML = '';
   for (let iter = 0; iter < issues[number - 1].articles.length; iter++) {
-    // FIXED: Both Issue 5 and Issue 6 use clean HTML layout file anchors (#a1 instead of PDF page values)
     if (number === 5 || number === 6) {
       document.getElementById("articles").innerHTML += `
         <div onclick="window.open('${issues[number - 1].path + '#' + issues[number - 1].pages[iter]}', '_blank');">
