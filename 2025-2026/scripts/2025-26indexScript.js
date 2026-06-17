@@ -128,7 +128,8 @@ let issues = [
       "United States: Political Polarisation and Its Impact on Economic Stability",
       "The Hidden Carbon Cost of the Cloud",
       "Neoliberalism, War, and Global Slowdown",
-      "As Trump Threatens to Leave North American Deal, Supporters Urge Him to ‘Do No Harm’"
+      "As Trump Threatens to Leave North American Deal, Supporters Urge Him to ‘Do No Harm’",
+      "How the Global Debt Crisis is Trapping Emerging Economies"
     ],
     pages: ["a1", "a2", "a3", "a4", "a5","a6"],
     contributor_text: `
