@@ -5,6 +5,10 @@ on:
     - cron: '0 0 * * *' # Runs automatically every night at midnight UTC
   workflow_dispatch: # Allows you to manually trigger it from GitHub anytime
 
+# CRITICAL FIX: Grants the automation bot explicit permission to push code updates back to your repo
+permissions:
+  contents: write
+
 jobs:
   update-crossword:
     runs-on: ubuntu-latest
@@ -12,12 +16,20 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Generate Crossword Data
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Creates a package.json automatically if you don't have one, preventing npm install crashes
+      - name: Ensure Node Environment Exists
         run: |
-          mkdir -p assets/data
-          # This creates a dummy JSON file structure for today's puzzle. 
-          # In the future, your script will overwrite this with real economic terms.
-          echo '{"date": "'$(date +%F)'", "words": ["inflation", "tariff", "liquidity"]}' > assets/data/today-crossword.json
+          if [ ! -f package.json ]; then
+            npm init -y
+          fi
+
+      - name: Generate Crossword Data
+        run: node scripts/generate-crossword.js
 
       - name: Commit and Push Update
         run: |
