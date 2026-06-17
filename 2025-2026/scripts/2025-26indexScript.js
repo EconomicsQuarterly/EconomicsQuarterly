@@ -9,22 +9,18 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 }
 
-// FIXED: Ordered sequentially 1 through 6 so array indices match perfectly
 let issues = [
   {
-    // Issue I (Implicitly maps to index 0)
-    path: "assets/VolumeII.pdf",
+    // Issue I (index 0)
+    path: "assets/VolumeI.pdf",
     articles: [
-      "Hong Kong Economic Outlook 2024/2025",
-      "Hong Kong: Houses, Taxes, and Monopolies",
-      "What do Locals Think of Hong Kong’s Housing Situation?",
+      "US, China, EU Macroeconomic Outlook Late 2023 / Early 2024",
       "Recommended Holding",
-      "S&P’s New Record High, The Magnificent 7, and Stock Indexes",
-      "BYD: Pioneering Growth and Innovation in the Global EV Market",
-      "Investing Concepts 2: Technical Analysis",
-      "Dogecoin and Elon Musk"
+      "Why Oil Prices are on the Rise, Again",
+      "Scrubbing Off The Green",
+      "Investing Concepts 1: Fundamental Analysis"
     ],
-    pages: [3, 7, 11, 12, 14, 18, 20, 22],
+    pages: [3, 7, 11, 12, 14],
     contributor_text: `
       <p>Written by Colin Ngan, Tim He, Sebastian Zhu, Howard Deng, Konnor Wan; Layout by Justin Chen</p>
     `
@@ -121,18 +117,18 @@ let issues = [
   },
   {
     // Issue VI (index 5)
-    // FIXED: Updated layout/articles text with your current cycle info
     path: "./2025-2026/issueVI.html",
     articles: [
       "The Unraveling of a Model: Germany’s Industrial Contraction as a Microcosm of the Global Economic Slowdown",
       "United States: Political Polarisation and Its Impact on Economic Stability",
       "The Hidden Carbon Cost of the Cloud",
       "Neoliberalism, War, and Global Slowdown",
-      "As Trump Threatens to Leave North American Deal, Supporters Urge Him to ‘Do No Harm’"
+      "As Trump Threatens to Leave North American Deal, Supporters Urge Him to ‘Do No Harm’",
+      "How the Global Debt Crisis is Trapping Emerging Economies"
     ],
-    pages: ["a1", "a2", "a3", "a4", "a5"],
+    pages: ["a1", "a2", "a3", "a4", "a5","a6"],
     contributor_text: `
-      <p><strong>Articles</strong>: (Head of Articles) Arthur Wong; Haoyu Yang, Eason Huang, Sam Wang, Dominic Gao, Nelson Bai, Sofie Tse, Valerie Ho;</p>
+      <p><strong>Articles</strong>: (Head of Articles) Arthur Wong; Haoyu Yang, Eason Huang, Sam Wang, Dominic Gao, Nelson Bai, Sofie Tse, Claire Fang;</p>
       <p><strong>Layout</strong>: (Head of Layout) Valerie Ho;</p>
       <p><strong>Marketing</strong>: (Head of Marketing) Katelyn To;</p>
       <p><strong>Administration</strong>: Eason Huang;</p>
@@ -149,51 +145,87 @@ function openPopup(i) {
     case "IV": number = 4; break;
     case "V": number = 5; break;
     case "VI": number = 6; break;
+    default: number = 1;
+  }
+
+  const issueData = issues[number - 1];
+  if (!issueData) {
+    console.error(`Could not locate configuration mapping for Issue ${i}.`);
+    return;
   }
 
   document.getElementById("popup-issue-number").innerText = `Issue ${i}`;
   document.getElementById("read-button").onclick = function () {
-    window.open(issues[number - 1].path, '_blank');
+    window.open(issueData.path, '_blank');
   }
 
-  document.getElementById("articles").innerHTML = '';
-  for (let iter = 0; iter < issues[number - 1].articles.length; iter++) {
+  const articlesContainer = document.getElementById("articles");
+  articlesContainer.innerHTML = '';
+
+  for (let iter = 0; iter < issueData.articles.length; iter++) {
+    // Both Issue V and Issue VI use internal anchor strings (#a1, #a2) instead of physical PDF page integers
     if (number === 5 || number === 6) {
-      document.getElementById("articles").innerHTML += `
-        <div onclick="window.open('${issues[number - 1].path + '#' + issues[number - 1].pages[iter]}', '_blank');">
-          ${issues[number - 1].articles[iter]}
+      articlesContainer.innerHTML += `
+        <div onclick="window.open('${issueData.path + '#' + issueData.pages[iter]}', '_blank');">
+          ${issueData.articles[iter]}
         </div>
       `;
     } else {
-      document.getElementById("articles").innerHTML += `
-        <div onclick="window.open('${issues[number - 1].path + '#page=' + issues[number - 1].pages[iter]}', '_blank');">
-          ${issues[number - 1].articles[iter]}
+      articlesContainer.innerHTML += `
+        <div onclick="window.open('${issueData.path + '#page=' + issueData.pages[iter]}', '_blank');">
+          ${issueData.articles[iter]}
         </div>
       `;
     }
   }
 
-  document.querySelector(".contributor-text p").innerHTML = issues[number - 1].contributor_text;
-  document.querySelector("#issue-popup").style.backgroundColor = `var(--${number}-primary)`;
-  document.querySelector("#issue-popup").style.color = `var(--${number}-secondary)`;
+  // Fallback checks for DOM styling injection
+  const contributorPar = document.querySelector(".contributor-text p");
+  if (contributorPar) {
+    contributorPar.innerHTML = issueData.contributor_text;
+  }
 
-  document.querySelector("#read-button").style.backgroundColor = `var(--${number}-secondary)`;
-  document.querySelector("#read-button").style.color = `var(--${number}-primary)`;
+  const popupWrapper = document.querySelector("#issue-popup");
+  if (popupWrapper) {
+    popupWrapper.style.backgroundColor = `var(--${number}-primary)`;
+    popupWrapper.style.color = `var(--${number}-secondary)`;
+  }
+
+  const readButton = document.querySelector("#read-button");
+  if (readButton) {
+    readButton.style.backgroundColor = `var(--${number}-secondary)`;
+    readButton.style.color = `var(--${number}-primary)`;
+  }
 
   document.querySelector(':root').style.setProperty('--color', `var(--${number}-secondary)`);
   document.querySelector(':root').style.setProperty('--background-color', `var(--${number}-primary)`);
 
-  document.querySelector("#close-button-wrapper object").contentDocument.getElementById("close").style.color = getComputedStyle(document.body).getPropertyValue(`--${number}-secondary`);
+  try {
+    const closeObj = document.querySelector("#close-button-wrapper object");
+    if (closeObj && closeObj.contentDocument) {
+      const closePath = closeObj.contentDocument.getElementById("close");
+      if (closePath) {
+        closePath.style.color = getComputedStyle(document.body).getPropertyValue(`--${number}-secondary`);
+      }
+    }
+  } catch (err) {
+    console.warn("SVG styling blocked by browser security. This is normal during local file testing.");
+  }
 
-  document.querySelector("#issue-popup").style.opacity = "1";
-  document.querySelector("#issue-popup").classList.add("active");
+  if (popupWrapper) {
+    popupWrapper.style.opacity = "1";
+    popupWrapper.classList.add("active");
+  }
 }
 
 function closePopup() {
-  document.querySelector("#issue-popup").style.opacity = "0";
-  setTimeout(function () {
-    document.querySelector("#issue-popup").classList.remove("active");
-  }, 300);
+  const popupWrapper = document.querySelector("#issue-popup");
+  if (popupWrapper) {
+    popupWrapper.style.opacity = "0";
+    setTimeout(function () {
+      popupWrapper.classList.remove("active");
+    }, 300);
+  }
 }
 
 for (let i = 0; i < document.querySelectorAll("#colorTiles div").length; i++) {
@@ -235,32 +267,49 @@ function colorIssue(t) {
   document.querySelector("#footer").style["color"] = `var(--${t}-primary)`;
 }
 
-
 window.onload = () => {
   let o = document.querySelectorAll(".instagram");
   for (let i = 0; i < o.length; i++) {
-    if(o[i].querySelector("object").contentDocument) {
-      o[i].querySelector("object").contentDocument.getElementById("instagram-icon").style.color = "white";
-      o[i].onmouseover = (e) => { e.target.querySelector("object").contentDocument.getElementById("instagram-icon").style.color = getComputedStyle(document.body).getPropertyValue(`--color`); }
-      o[i].onmouseleave = (e) => { e.target.querySelector("object").contentDocument.getElementById("instagram-icon").style.color = "white"; }
-    }
+    try {
+      if (o[i].querySelector("object") && o[i].querySelector("object").contentDocument) {
+        o[i].querySelector("object").contentDocument.getElementById("instagram-icon").style.color = "white";
+        o[i].onmouseover = (e) => {
+          e.target.querySelector("object").contentDocument.getElementById("instagram-icon").style.color = getComputedStyle(document.body).getPropertyValue(`--color`);
+        }
+        o[i].onmouseleave = (e) => {
+          e.target.querySelector("object").contentDocument.getElementById("instagram-icon").style.color = "white";
+        }
+      }
+    } catch(e) {}
   }
 
   o = document.querySelectorAll(".youtube");
   for (let i = 0; i < o.length; i++) {
-    if(o[i].querySelector("object").contentDocument) {
-      o[i].querySelector("object").contentDocument.getElementById("youtube-icon").style.color = "white";
-      o[i].onmouseover = (e) => { e.target.querySelector("object").contentDocument.getElementById("youtube-icon").style.color = getComputedStyle(document.body).getPropertyValue(`--color`); }
-      o[i].onmouseleave = (e) => { e.target.querySelector("object").contentDocument.getElementById("youtube-icon").style.color = "white"; }
-    }
+    try {
+      if (o[i].querySelector("object") && o[i].querySelector("object").contentDocument) {
+        o[i].querySelector("object").contentDocument.getElementById("youtube-icon").style.color = "white";
+        o[i].onmouseover = (e) => {
+          e.target.querySelector("object").contentDocument.getElementById("youtube-icon").style.color = getComputedStyle(document.body).getPropertyValue(`--color`);
+        }
+        o[i].onmouseleave = (e) => {
+          e.target.querySelector("object").contentDocument.getElementById("youtube-icon").style.color = "white";
+        }
+      }
+    } catch(e) {}
   }
 
   o = document.querySelectorAll(".email");
   for (let i = 0; i < o.length; i++) {
-    if(o[i].querySelector("object").contentDocument) {
-      o[i].querySelector("object").contentDocument.getElementById("email-icon").style.color = "white";
-      o[i].onmouseover = (e) => { e.target.querySelector("object").contentDocument.getElementById("email-icon").style.color = getComputedStyle(document.body).getPropertyValue(`--color`); }
-      o[i].onmouseleave = (e) => { e.target.querySelector("object").contentDocument.getElementById("email-icon").style.color = "white"; }
-    }
+    try {
+      if (o[i].querySelector("object") && o[i].querySelector("object").contentDocument) {
+        o[i].querySelector("object").contentDocument.getElementById("email-icon").style.color = "white";
+        o[i].onmouseover = (e) => {
+          e.target.querySelector("object").contentDocument.getElementById("email-icon").style.color = getComputedStyle(document.body).getPropertyValue(`--color`);
+        }
+        o[i].onmouseleave = (e) => {
+          e.target.querySelector("object").contentDocument.getElementById("email-icon").style.color = "white";
+        }
+      }
+    } catch(e) {}
   }
 }
